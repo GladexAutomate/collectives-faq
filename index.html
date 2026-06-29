@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collectives Travel · Agent Sales & FAQ Guide 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#f5f4f0;color:#1a1a18;line-height:1.65;font-size:15px}
+.hero{position:relative;height:300px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,18,36,0.95) 0%,rgba(8,18,36,0.45) 55%,rgba(8,18,36,0.1) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 40px 36px;width:100%}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:8px}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:36px;font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.02em}
+.hero-sub{font-size:13px;color:rgba(255,255,255,0.6);margin-top:8px}
+.tab-nav{display:flex;background:#fff;border-bottom:1.5px solid #e2dfd5;overflow-x:auto;scrollbar-width:none;padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.tab-nav::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;padding:15px 16px 13px;font-size:13px;font-weight:500;color:#7a7870;border:none;background:transparent;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;cursor:pointer;transition:color .15s,border-color .15s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:#1a2e4a}
+.tab-btn.active{color:#1a2e4a;border-bottom-color:#1a6ab1;font-weight:700}
+.content{max-width:900px;margin:0 auto;padding:32px 24px 80px}
+.destination{display:none}
+.destination.active{display:block}
+.dest-banner{position:relative;height:220px;border-radius:16px;overflow:hidden;margin-bottom:26px}
+.dest-banner img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.dest-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(8,18,36,0.82) 0%,rgba(8,18,36,0.25) 100%)}
+.dest-text{position:absolute;bottom:0;left:0;right:0;padding:22px 26px}
+.dest-text h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:#fff;margin-bottom:3px}
+.dest-text p{font-size:12px;color:rgba(255,255,255,0.7)}
+.dtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.dtag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.28)}
+.photos-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:#8a8780;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+.photos-title::after{content:'';flex:1;height:1px;background:#e2dfd5}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:26px}
+.pgrid-2{grid-template-columns:repeat(2,1fr)}
+.pcard{position:relative;border-radius:10px;overflow:hidden;height:138px}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.pcard:hover img{transform:scale(1.07)}
+.pcard-lbl{position:absolute;bottom:0;left:0;right:0;padding:7px 9px;background:linear-gradient(to top,rgba(0,0,0,0.78),transparent);color:#fff;font-size:10.5px;font-weight:600}
+.pcard-tall{height:175px}
+.rates{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:7px;margin-bottom:26px}
+.rcard{background:#fff;border:1px solid #e2dfd5;border-radius:9px;padding:11px 13px;text-align:center}
+.rl{font-size:9.5px;color:#9a9890;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.rv{font-size:16px;font-weight:800;color:#1a2e4a}
+.rs{font-size:9.5px;color:#9a9890;margin-top:2px}
+.faq-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:#8a8780;margin:26px 0 10px;display:flex;align-items:center;gap:8px}
+.faq-title::after{content:'';flex:1;height:1px;background:#e2dfd5}
+.fi{background:#fff;border:1px solid #e2dfd5;border-radius:10px;margin-bottom:6px;overflow:hidden;transition:border-color .15s}
+.fi:hover{border-color:#b8b5ac}
+.fi.open{border-color:#1a6ab1}
+.fq{display:flex;align-items:flex-start;gap:10px;padding:13px 16px;cursor:pointer;user-select:none}
+.fnum{font-size:10.5px;font-weight:800;color:#1a6ab1;min-width:20px;margin-top:2px}
+.fqt{font-size:13.5px;font-weight:600;color:#1a1a18;flex:1;line-height:1.4}
+.fico{width:21px;height:21px;border-radius:50%;background:#f0ede6;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s,background .15s;font-size:15px;color:#5a5850;margin-top:1px;line-height:1}
+.fi.open .fico{transform:rotate(45deg);background:#1a2e4a;color:#fff}
+.fa{display:none;padding:0 16px 15px 46px;font-size:13px;color:#46443c;line-height:1.78}
+.fi.open .fa{display:block}
+.fa ul{padding-left:16px}
+.fa li{margin-bottom:5px}
+.fa strong{color:#1a1a18;font-weight:600}
+.tip{background:#eef5ff;border-left:3px solid #1a6ab1;padding:9px 12px;border-radius:0 7px 7px 0;margin-top:10px;font-size:12.5px;color:#1a3a6a}
+.warn{background:#fffbea;border-left:3px solid #e8a020;padding:9px 12px;border-radius:0 7px 7px 0;margin-top:10px;font-size:12.5px;color:#7a4800}
+.good{background:#edfaf3;border-left:3px solid #1a9a50;padding:9px 12px;border-radius:0 7px 7px 0;margin-top:10px;font-size:12.5px;color:#0d5c28}
+.red{background:#fff0f0;border-left:3px solid #cc2a2a;padding:9px 12px;border-radius:0 7px 7px 0;margin-top:10px;font-size:12.5px;color:#7a1010}
+.acard{background:#edfaf3;border:1.5px solid #7fd4a8;border-radius:14px;padding:18px 22px;margin-top:28px}
+.acard h3{font-size:13.5px;font-weight:700;color:#0d5c28;margin-bottom:12px}
+.acard ul{list-style:none;padding:0}
+.acard li{display:flex;gap:10px;font-size:12.5px;color:#1a5038;padding:6px 0;border-bottom:1px solid rgba(127,212,168,0.32)}
+.acard li:last-child{border:none;padding-bottom:0}
+.sdot{width:21px;height:21px;border-radius:50%;background:#1a7a40;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.acard a{color:#1a5a96;text-decoration:underline;word-break:break-all}
+.month-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin:10px 0}
+.mb{text-align:center;padding:6px 4px;border-radius:6px;font-size:10px;font-weight:600}
+.mb-best{background:#d4f4e2;color:#0d5c28}
+.mb-good{background:#e8f4ff;color:#1a3a6a}
+.mb-peak{background:#fff0d0;color:#7a4800}
+.mb-hot{background:#ffe4e4;color:#7a1010}
+.mb label{display:block;font-size:9px;font-weight:400;margin-top:2px;opacity:.8}
+.comm-strip{background:#1a2e4a;border-radius:10px;padding:13px 18px;margin-bottom:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.comm-strip span{font-size:12px;color:rgba(255,255,255,0.7)}
+.comm-strip strong{color:#fff}
+.comm-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:4px 12px;font-size:12px;color:#fff;font-weight:600}
+@media(max-width:640px){
+  .hero{height:240px}.hero h1{font-size:24px}.hero-content{padding:0 18px 26px}
+  .content{padding:18px 12px 60px}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
+  .tab-btn{padding:12px 11px 10px;font-size:11.5px}
+  .month-grid{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1533050487297-09b450131914?w=1400&q=80" alt="Asia travel">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Collectives Travel · Agent Sales &amp; FAQ Guide · 2026–2027</div>
+    <h1>Asia Travel Guide<br>for Agents</h1>
+    <p class="hero-sub">Rates, inclusions, best travel months, visa requirements, selling tips, and all FAQs — everything you need to confidently close the sale.</p>
+  </div>
+</div>
+
+<nav class="tab-nav" role="tablist">
+  <button class="tab-btn active" onclick="go('danang')">🇻🇳 Da Nang</button>
+  <button class="tab-btn" onclick="go('korea')">🇰🇷 Korea</button>
+  <button class="tab-btn" onclick="go('tokyo')">🗼 Japan Tokyo</button>
+  <button class="tab-btn" onclick="go('osaka')">🏯 Japan Osaka</button>
+  <button class="tab-btn" onclick="go('combo')">🎢 Tokyo–Osaka</button>
+  <button class="tab-btn" onclick="go('hokkaido')">❄️ Hokkaido 2027</button>
+</nav>
+
+<div class="content">
+
+<section class="destination active" id="danang">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Da Nang Vietnam">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Da Nang, Vietnam</h2>
+      <p>5 Days · 3 Nights · via QH (Bamboo Airways) · Nov–Dec 2026</p>
+      <div class="dtags">
+        <span class="dtag">From PHP 21,999/pax</span>
+        <span class="dtag">20kg check-in baggage included</span>
+        <span class="dtag">Currently visa-free for Filipinos</span>
+        <span class="dtag">Golden Bridge • Hoi An • Ba Na Hills</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Golden_Bridge_%28Ba_N%C3%A0_Hills%29_01.jpg/800px-Golden_Bridge_%28Ba_N%C3%A0_Hills%29_01.jpg" alt="Golden Bridge Ba Na Hills"><div class="pcard-lbl">Golden Bridge — Ba Na Hills (Day 2)</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hoi_An_Covered_Bridge.jpg/800px-Hoi_An_Covered_Bridge.jpg" alt="Hoi An Ancient Town"><div class="pcard-lbl">Hoi An Ancient Town — UNESCO Site (Day 1)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Dragon_Bridge%2C_Da_Nang%2C_Vietnam.jpg/800px-Dragon_Bridge%2C_Da_Nang%2C_Vietnam.jpg" alt="Dragon Bridge Da Nang"><div class="pcard-lbl">Dragon Bridge (Day 3)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Son_Tra_peninsula_Da_Nang.jpg/800px-Son_Tra_peninsula_Da_Nang.jpg" alt="Son Tra Peninsula"><div class="pcard-lbl">Son Tra Peninsula — Lady Buddha (Day 1)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hai_Van_Pass_Vietnam.jpg/800px-Hai_Van_Pass_Vietnam.jpg" alt="Hai Van Pass"><div class="pcard-lbl">Hai Van Pass & Lang Co (Day 4)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Ba_Na_Hills_French_Village.jpg/800px-Ba_Na_Hills_French_Village.jpg" alt="Ba Na Hills French Village"><div class="pcard-lbl">French Village — Ba Na Hills Summit</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 1,500 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 18,000 / pax</span>
+    <span>Optional Tour Upsell</span><span class="comm-pill">PHP 6,299 / pax</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">Adult / Child w/ Bed</div><div class="rv">₱21,999</div><div class="rs">Nov 11–14 · Nov 18–21 · Dec 09–12</div></div>
+    <div class="rcard"><div class="rl">Child w/o Bed (2–5 y/o)</div><div class="rv">₱20,999</div><div class="rs">Same travel dates</div></div>
+    <div class="rcard"><div class="rl">Single Supplement</div><div class="rv">₱5,499</div><div class="rs">Solo room add-on</div></div>
+    <div class="rcard"><div class="rl">PH Travel Tax</div><div class="rv">₱1,620</div><div class="rs">Paid at airport (excluded)</div></div>
+    <div class="rcard"><div class="rl">Terminal Fees</div><div class="rv">₱2,730</div><div class="rs">MNL + DAD (excluded)</div></div>
+    <div class="rcard"><div class="rl">Fuel Surcharge</div><div class="rv">₱2,340</div><div class="rs">Mandatory · confirm with team</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is included in the Da Nang package?</span><span class="fico">+</span></div>
+  <div class="fa">Roundtrip airfare via QH (Bamboo Airways) · <strong>20kg check-in + 7kg carry-on baggage</strong> (unique advantage vs. other packages) · 3 nights 4-star Sea Garden Hotel or similar (twin sharing) · Daily hotel breakfast · 5 meals total as per itinerary · All entrance tickets listed · English-speaking guide.<div class="tip">Selling point: Da Nang is one of the few packages that includes 20kg check-in baggage. Use this when clients compare packages — it's a real money saver vs. buying baggage separately.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">What is NOT included? What is the true total out-of-pocket cost?</span><span class="fico">+</span></div>
+  <div class="fa">Not included: PH Travel Tax (₱1,620) · Terminal Fees (₱2,730 Da Nang + Manila) · Tips for driver & guide (₱1,300 — mandatory) · Fuel Surcharge (₱2,340 — mandatory, confirm with team) · Visa if needed · Personal expenses · Optional Tour.<br><br><strong>True estimated out-of-pocket: ₱21,999 + ~₱7,990 = ~₱29,989 per pax.</strong><div class="warn">Always present this full cost breakdown to clients before they book. Transparent pricing builds trust and prevents post-trip complaints.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">What is the day-by-day itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1 — Manila → Da Nang:</strong> Arrive → Breakfast → Son Tra Peninsula (Lady Buddha, 67m) → Canaan Island (Coconut Boat Ride) → Hoi An Ancient Town → Dinner → Hotel</li>
+  <li><strong>Day 2 — Ba Na Hills:</strong> Breakfast → Ba Na Hills → World's longest single-line cable car → French Village → Golden Bridge (Buddha Hand Bridge) → Local Mini Supermarket → Hotel</li>
+  <li><strong>Day 3 — Da Nang City:</strong> Breakfast → Latex Shop → Dragon Bridge → APEC Park → Da Nang Cathedral (Pink Church) → Silk Shop → Dinner → Hotel</li>
+  <li><strong>Day 4 — Departure:</strong> Breakfast → Treasure Shop → Vietnamese Coffee & Bread → Hai Van Pass & Lang Co → Jewelry Shop → Airport</li>
+  <li><strong>Day 5:</strong> Arrive Manila</li>
+  </ul>
+  <div class="tip">Flight reference: QH MNL-DAD ~03:05–04:35 arrival / QH DAD-MNL ~22:25–02:00+1 departure. Final voucher sent 3 days before travel.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">What is the best season to visit Da Nang? When should agents push this?</span><span class="fico">+</span></div>
+  <div class="fa">November–December is the <strong>ideal season</strong> — cool, dry, and comfortable at 20–25°C. This is exactly when our package runs.
+  <div class="month-grid">
+    <div class="mb mb-hot">Jan<label>Rainy</label></div>
+    <div class="mb mb-hot">Feb<label>Rainy</label></div>
+    <div class="mb mb-peak">Mar<label>Hot</label></div>
+    <div class="mb mb-hot">Apr<label>Hot</label></div>
+    <div class="mb mb-hot">May<label>Very Hot</label></div>
+    <div class="mb mb-hot">Jun<label>Very Hot</label></div>
+    <div class="mb mb-hot">Jul<label>Very Hot</label></div>
+    <div class="mb mb-hot">Aug<label>Hot</label></div>
+    <div class="mb mb-hot">Sep<label>Typhoon</label></div>
+    <div class="mb mb-hot">Oct<label>Typhoon</label></div>
+    <div class="mb mb-best">Nov<label>✓ Best</label></div>
+    <div class="mb mb-best">Dec<label>✓ Best</label></div>
+  </div>
+  Pitch: <em>"November and December are the best months to visit Da Nang — cool weather, no typhoons, and Hoi An lantern season."</em></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">How do agents sell this package? What are the strongest talking points?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>🌉 <strong>Golden Bridge (Ba Na Hills):</strong> The most Instagrammed spot in Vietnam right now. Show the photo — stone hands holding a golden bridge in the clouds. One image closes sales.</li>
+  <li>🏘️ <strong>Hoi An Ancient Town:</strong> UNESCO World Heritage Site, lantern-lit streets at night. Show nighttime photos for maximum impact.</li>
+  <li>🥥 <strong>Canaan Island Coconut Boat Ride:</strong> Unique, fun, very photogenic — great for groups and families.</li>
+  <li>💼 <strong>20kg check-in baggage included:</strong> "You can shop freely — your baggage is already covered."</li>
+  <li>💸 <strong>Most affordable international package (~₱30K all-in):</strong> Perfect entry-level international trip for first-time travelers.</li>
+  <li>🌅 <strong>Optional Han River Cruise + Massage + Buffet (₱6,299):</strong> Always offer this at booking — most couples and groups say yes.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">Do Filipinos need a visa for Vietnam? What are the entry requirements?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Filipino passport holders are currently visa-free for short stays in Vietnam.</strong><br><br>However, starting <strong>April 15, 2026</strong>, all visitors must complete a <strong>Pre-Arrival Information Submission</strong> online before entering Vietnam:
+  <ul>
+  <li>Submit at least <strong>3 days before arrival</strong> at <strong>prearrival.immigration.gov.vn</strong></li>
+  <li>Airport QR code is available but NOT recommended — causes delays</li>
+  <li>All passengers must register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</li>
+  </ul>
+  <strong>For non-Filipino passports — Visa Upon Arrival (VOA):</strong> Passport + Printed Letter of Approval (LOA) + 2 pcs 2x2 white background photo. Fee: USD 40/pax. Regular processing: 7 weekdays. Expedited: 2–5 weekdays (+USD 30). Visa processing closes 1 day before departure — no late applications.
+  <div class="warn">Always verify the latest visa policy per passport type before confirming any booking.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">What are the "complementary shopping stops"? Are clients forced to buy?</span><span class="fico">+</span></div>
+  <div class="fa">"Complementary" means <strong>free entry with zero obligation to purchase</strong>. Clients visit Latex Shop, Silk Shop, Jewelry Shop, and Treasure Shop as part of the tour at no extra charge. The operator earns a commission from stores for bringing visitors in.<div class="tip">Always tell clients upfront: "You'll visit some shops — free to browse, absolutely no pressure to buy." This prevents complaints on tour. All purchases are at the sole discretion and responsibility of the buyer.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">What is the optional tour and how should agents upsell it?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Optional Tour: ₱6,299/pax</strong> — Han River Cruise (night view + 1 drink) + Vietnamese Massage + Buffet Dinner.<br><br>How to upsell: Offer it at the moment of booking. For couples: <em>"A romantic river cruise at night is the perfect ending to your Vietnam trip."</em> For groups: <em>"Everyone who goes to Da Nang does this — you don't want to miss the Han River at night."</em> Collect payment together with the down payment so it's locked in.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">What makes Ba Na Hills special? Why is it the highlight of the trip?</span><span class="fico">+</span></div>
+  <div class="fa">Ba Na Hills is a French colonial mountain resort at 1,487 meters elevation — accessible via the <strong>world's longest single-line cable car</strong> (5,801m, ~20 min ride). At the summit: French Village, gardens, game zones, restaurants, and the iconic <strong>Golden Bridge (Buddha Hand Bridge)</strong> — giant stone hands holding a golden pedestrian bridge above the clouds. Temperature is 8–10°C cooler than the city.<div class="tip">Remind clients to bring a light jacket — the summit is noticeably cooler. Show photos of the Golden Bridge for instant client interest.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What is Hoi An and why do clients love it?</span><span class="fico">+</span></div>
+  <div class="fa">Hoi An Ancient Town is a <strong>UNESCO World Heritage Site</strong> 30km from Da Nang — one of the best-preserved trading ports in Southeast Asia. Famous for colorful silk lanterns lighting the streets every night, the Japanese Covered Bridge (18th century), tailor shops (custom clothes in 24 hours), and riverside restaurants. November has the Hoi An Lantern Festival (full moon night) — extremely atmospheric.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">What are the booking, deposit, and cancellation policies?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Down payment: <strong>₱18,000/pax</strong> — non-refundable upon reservation</li>
+  <li>Package is non-rebookable, non-endorsable, and non-refundable</li>
+  <li>Itinerary may change due to weather or local conditions — all destinations will still be visited</li>
+  <li>Hotel may be replaced with similar property if listed hotel is unavailable</li>
+  <li>Final travel voucher sent <strong>3 days before travel date</strong></li>
+  </ul>
+  <div class="warn">Always collect the deposit immediately after confirming — slots for these specific dates are limited.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What meals are included and what about Day 2 at Ba Na Hills?</span><span class="fico">+</span></div>
+  <div class="fa">Package includes <strong>5 meals total</strong>: Day 1 (B/L/D) · Day 2 (Breakfast only) · Day 3 (B/L/D) · Day 4 (B/L/no dinner).<br><br>On Day 2 at Ba Na Hills, lunch and dinner are at the client's own expense at the summit restaurants. Budget approx. ₱500–1,500/pax for Day 2 meals not covered.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">How do agents handle a client who thinks Da Nang is "too cheap"?</span><span class="fico">+</span></div>
+  <div class="fa">This is a common objection. Handle it with a breakdown:
+  <ul>
+  <li><em>"For ₱21,999, you get roundtrip airfare, 3 nights 4-star hotel, 5 meals, all entrance tickets, 20kg check-in baggage, and a private English-speaking guide. That's not cutting corners — that's a group tour rate."</em></li>
+  <li><em>"Booking the airfare alone costs ₱8,000–₱12,000. Add 3 nights hotel at ₱3,000–₱5,000/night, meals, and tours — you're already over ₱35,000 if you book yourself."</em></li>
+  <li><em>"And it includes 20kg check-in baggage — most packages at this price are hand-carry only."</em></li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What should agents tell clients to prepare before the trip?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Documents:</strong> Valid passport · PH e-Travel registration (etravel.gov.ph, 72hrs before departure) · Vietnam Pre-Arrival form (prearrival.immigration.gov.vn, 3 days before arrival) · Final travel voucher.<br><br><strong>Money to prepare:</strong> ₱1,620 PH Travel Tax · ₱2,730 terminal fees · ₱2,340 fuel surcharge (confirm with team) · ₱1,300 tips (mandatory) · ₱6,299 optional tour (if availed) · Extra for shopping and personal expenses.<br><br><strong>What to pack:</strong> Light jacket for Ba Na Hills · Comfortable walking shoes · Sunscreen · Small bills for street food.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">What are the flight details and airport tips?</span><span class="fico">+</span></div>
+  <div class="fa">Via <strong>QH (Bamboo Airways)</strong>: MNL-DAD ~03:05–04:35 (arrival) / DAD-MNL ~22:25–02:00+1 (return). Subject to change — confirm with team.<div class="warn">The Da Nang flight departs Manila around 03:05 AM. Provincial clients must arrive at NAIA by midnight at the latest — advise them to travel to Manila the day before. For distant provinces, arrive at NAIA at least 10 hours before departure.</div></div></div>
+
+  <div class="acard">
+    <h3>✅ Da Nang Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">2</div><div>Complete <strong>Vietnam Pre-Arrival form</strong> at prearrival.immigration.gov.vn — at least 3 days before Vietnam arrival</div></li>
+      <li><div class="sdot">3</div><div>Prepare <strong>₱1,620 PH Travel Tax</strong> (exact amount, paid at TIEZA airport counter)</div></li>
+      <li><div class="sdot">4</div><div>Prepare <strong>₱2,730 terminal fees</strong> + <strong>₱2,340 fuel surcharge</strong> (confirm exact amount)</div></li>
+      <li><div class="sdot">5</div><div>Prepare <strong>₱1,300 tips</strong> for driver and guide — mandatory, collected with tour fee</div></li>
+      <li><div class="sdot">6</div><div>Bring a <strong>light jacket</strong> for Ba Na Hills summit — noticeably cooler than the city</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="destination" id="korea">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=900&q=80" alt="Seoul Korea">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Nami Island + Seoul, Korea</h2>
+      <p>6 Days · 4 Nights · via Cebu Pacific · May, Sep, Oct, Nov, Dec 2026</p>
+      <div class="dtags">
+        <span class="dtag">From PHP 37,999/pax</span>
+        <span class="dtag">Guaranteed Group Visa Included</span>
+        <span class="dtag">Nami Island · Gyeongbokgung · Myeongdong</span>
+        <span class="dtag">Dec: Ski Resort on Day 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nami_Island%2C_South_Korea.jpg/800px-Nami_Island%2C_South_Korea.jpg" alt="Nami Island"><div class="pcard-lbl">Nami Island — Day 1 (Winter Sonata filming location)</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gyeongbokgung_Palace_Geunjeongjeon.jpg/800px-Gyeongbokgung_Palace_Geunjeongjeon.jpg" alt="Gyeongbokgung Palace"><div class="pcard-lbl">Gyeongbokgung Palace — Day 4</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/N_Seoul_Tower_P1090402.jpg/480px-N_Seoul_Tower_P1090402.jpg" alt="N Seoul Tower"><div class="pcard-lbl">N Seoul Tower — Day 3</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bukchon_Hanok_Village%2C_Seoul.jpg/800px-Bukchon_Hanok_Village%2C_Seoul.jpg" alt="Bukchon Hanok Village"><div class="pcard-lbl">Bukchon Hanok Village — Day 2</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1601135553602-31a6b1f19eaf?w=600&q=80" alt="Myeongdong Seoul"><div class="pcard-lbl">Myeongdong Shopping — Day 4</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Korea autumn Nami Island"><div class="pcard-lbl">Autumn Foliage — October Peak Season</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 2,000 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 18,000 / pax</span>
+    <span>Oct Surcharge</span><span class="comm-pill">+PHP 6,000 (Autumn Peak)</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">Adult Rate (most dates)</div><div class="rv">₱37,999</div><div class="rs">May · Sep · Nov · Dec</div></div>
+    <div class="rcard"><div class="rl">Adult Rate (Oct peak)</div><div class="rv">₱43,999</div><div class="rs">Oct 11–16 · Autumn Season</div></div>
+    <div class="rcard"><div class="rl">Child No Bed (2–12 y/o)</div><div class="rv">₱30,999</div><div class="rs">Same travel dates</div></div>
+    <div class="rcard"><div class="rl">Infant (estimated)</div><div class="rv">₱19,999</div><div class="rs">Estimated fee</div></div>
+    <div class="rcard"><div class="rl">Single Supplement</div><div class="rv">₱16,999</div><div class="rs">Solo room add-on</div></div>
+    <div class="rcard"><div class="rl">Optional Buffet Upgrade</div><div class="rv">₱799</div><div class="rs">Day 4 lunch — Dinning One</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is included and not included in the Korea package?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>INCLUDED:</strong> Roundtrip airfare via Cebu Pacific · 1pc 7kg carry-on · 4 nights hotel (Park Habio / Gimpo Marina Bay or similar) · 4 breakfasts / 4 lunches / 2 dinners · <strong>Guaranteed Korea Group Visa</strong> · Tours & entrance: Nami Island, N Seoul Tower Square, Gyeongbok Palace · English guide · Shopping stops: Ginseng, Cosmetic, Amethyst, Red Pine · 1 mineral water/day.<br><br><strong>NOT INCLUDED:</strong> PH Travel Tax ₱1,620 · Travel Insurance (mandatory) · Tips ₱300/pax/day · Fuel Surcharge (confirm with team) · Ski equipment for December · Optional buffet lunch ₱799/pax.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">What is the complete 6-day Korea itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1 (Regular):</strong> Incheon arrival → Nami Island → Seoul → Dongdaemun Market | Lunch: Dakgalbi · Dinner: Gamjatang</li>
+  <li><strong>Day 1 (December only):</strong> Incheon → Nami Island → Ski Resort (equipment excluded) → Seoul</li>
+  <li><strong>Day 2 — Seoul Highlights:</strong> Cheonggyecheon Stream → Gwangjang Local Market → Hikr Ground → Bukchon Hanok Village → Hongdae Street | Lunch: Ginseng Chicken Soup · Dinner: Pork BBQ</li>
+  <li><strong>Day 3 — Modern Seoul:</strong> Red Pine & Cosmetic Shop → N Seoul Tower Square & Love Lock Wall (EV bus, observatory excluded) → COEX Mall & Starfield Library → K-Star Road | Lunch: Ham & Vegetable Stew</li>
+  <li><strong>Day 4 — Heritage Tour:</strong> Ginseng & Amethyst Shop → Gyeongbokgung Palace & National Folklore Museum → Duty Free → Myeongdong | Lunch: Jjimdak (optional buffet ₱799)</li>
+  <li><strong>Day 5:</strong> Breakfast → Souvenir Shop → Free time → Late evening transfer to Incheon Airport</li>
+  <li><strong>Day 6:</strong> Depart Incheon → Arrive Manila</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">What is the best season to visit Korea? Which date should agents push?</span><span class="fico">+</span></div>
+  <div class="fa">Each travel date has a unique seasonal hook:
+  <div class="month-grid">
+    <div class="mb mb-good">May<label>Spring</label></div>
+    <div class="mb mb-best">Sep<label>Early Fall</label></div>
+    <div class="mb mb-best">Oct<label>🍁 Peak</label></div>
+    <div class="mb mb-good">Nov<label>Cool Fall</label></div>
+    <div class="mb mb-peak">Dec<label>⛷️ Ski</label></div>
+    <div class="mb mb-hot">Jan–Apr<label>Coldest</label></div>
+  </div>
+  <ul>
+  <li>🍁 <strong>October (Peak):</strong> Full autumn foliage — Nami Island blazes orange and red. Most scenic Korea experience. Worth the ₱6,000 surcharge. Show fall photos to close.</li>
+  <li>🍂 <strong>September:</strong> Early fall, pleasant 18–24°C. Best overall weather. No surcharge.</li>
+  <li>⛷️ <strong>December:</strong> Ski resort on Day 1 — unique to this month only. Great for adventure seekers.</li>
+  <li>🌸 <strong>May:</strong> Late spring, warm, comfortable. No surcharge.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">How do agents sell Korea? Strongest talking points?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>🛂 <strong>Guaranteed Group Visa — your #1 close:</strong> "We handle your Korea visa — no embassy queuing." This removes the biggest objection Filipinos have about Korea travel.</li>
+  <li>🍁 <strong>Autumn foliage (October):</strong> Show photos of Nami Island in fall colors. The imagery sells itself.</li>
+  <li>⛷️ <strong>December Ski Resort:</strong> "First day in Korea — and you try skiing!" Great for adventurous clients who've never skied.</li>
+  <li>🎭 <strong>K-culture connection:</strong> Nami Island (Winter Sonata filming location), Bukchon Hanok (seen in every K-drama), K-Star Road, Myeongdong K-beauty shopping.</li>
+  <li>🏰 <strong>Gyeongbokgung Palace:</strong> Most iconic Korea landmark — guard changing ceremony and royal architecture.</li>
+  <li>💸 <strong>All-in value:</strong> ₱37,999 for 6 days including visa, airfare, 4 nights hotel, 10 meals. Very competitive.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">What is the Guaranteed Group Visa? Who qualifies and who doesn't?</span><span class="fico">+</span></div>
+  <div class="fa">The tour operator files the Korea Group Visa on behalf of the entire group. Clients do NOT go to the Korean Embassy themselves.<br><br><strong>Documents each applicant must submit:</strong> Certificate of Employment (COE) · Income Tax Return (ITR) · Bank Statement + Bank Certificate · Two (2) valid IDs with address · Birth Certificate (for guarantor/dependent) · Proof of relationship (for guarantor/dependent).<br><br><strong>Deadline: 45 days before travel date</strong> (+7 day grace period). Full list: bit.ly/KOREA-VISA-REQUIREMENTS
+  <div class="red">NOT ELIGIBLE: clients with previous Korea visa denials, overstays, or illegal stay history. <strong>Solo travelers strictly not allowed — minimum 2 pax per booking.</strong></div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">What Korean food will clients eat on this tour?</span><span class="fico">+</span></div>
+  <div class="fa">4 breakfasts (hotel) · 4 lunches · 2 dinners. Specific dishes:
+  <ul>
+  <li>Day 1 Lunch: <strong>Dakgalbi</strong> — spicy stir-fried chicken with rice cakes</li>
+  <li>Day 1 Dinner: <strong>Gamjatang</strong> — pork bone stew with potato (hearty comfort food)</li>
+  <li>Day 2 Lunch: <strong>Ginseng Chicken Soup (Samgyetang)</strong> — whole chicken stuffed with rice and ginseng, considered a Korean health delicacy</li>
+  <li>Day 2 Dinner: <strong>Pork BBQ</strong> — classic Korean table grill</li>
+  <li>Day 3 Lunch: <strong>Ham & Vegetable Stew</strong></li>
+  <li>Day 4 Lunch: <strong>Jjimdak</strong> — braised chicken in sweet-savory soy sauce (or optional buffet ₱799)</li>
+  </ul>
+  <div class="tip">Use the food lineup as a selling point for foodie clients: "You eat like a local — all authentic Korean dishes, not tourist versions."</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">What is December Korea like? What is the Ski Resort visit?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>December 12–17 departure only</strong> includes a Ski Resort visit on Day 1 — exclusive to December. After Nami Island, the group heads to a ski resort where clients can try skiing. <strong>Ski equipment and suits are NOT included</strong> — rent on-site (approx. KRW 30,000–50,000/session).<br><br><strong>December weather:</strong> 0°C to –5°C. Clients must bring heavy winter jacket, thermal layers, gloves, and waterproof boots.
+  <div class="tip">Pitch December as the "winter adventure" departure — skiing, snow, and holiday Korea. Very different from the other months.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">Why is the tour called "6 Days 4 Nights" when it seems like 5 days?</span><span class="fico">+</span></div>
+  <div class="fa">The tour departs Incheon <strong>late at night on Day 5</strong> and arrives in Manila <strong>early morning on Day 6</strong>. Even though hotel nights total 4, clients experience 6 full calendar days of travel — which is genuinely more value than a standard 5D4N package. The late-night departure and early-morning arrival are both counted as travel days.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">How should agents handle clients worried about visa rejection?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Reassure with group visa advantage:</strong> "Our operator's group visa has a high approval rate because it goes through an organized tour structure."</li>
+  <li><strong>Screen disqualifiers upfront:</strong> Before booking, ask: "Have you ever been denied a Korean visa? Have you ever overstayed in Korea?" If yes → advise Individual Visa option (additional cost, confirm with team) or recommend a different destination.</li>
+  <li><strong>Emphasize document completeness:</strong> "As long as your documents are complete and accurate — COE, ITR, bank docs — your chances are strong."</li>
+  </ul>
+  <div class="warn">If visa is denied, the visa fee and processing fee are non-refundable. Communicate this clearly before booking.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What is Nami Island and why does it always appear in Korea pitches?</span><span class="fico">+</span></div>
+  <div class="fa">Nami Island (Namiseom) is a small river island in Chuncheon, about 1.5 hours from Seoul. Famous for tree-lined paths that blaze orange and yellow in autumn — some of the most photographed fall foliage in Asia. Also the filming location of the K-drama <strong>Winter Sonata (2002)</strong> — the show that launched the Korean Wave internationally. Visited on Day 1 after arriving from Incheon. Entrance and ferry crossing are included.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">What is Bukchon Hanok Village?</span><span class="fico">+</span></div>
+  <div class="fa">Bukchon Hanok Village is one of Seoul's most photographed neighborhoods — a hillside of traditional Korean houses (hanok) with stunning views of the city below. Over 600 preserved hanok from the Joseon Dynasty. The winding alley with a view of rooftops against the Seoul skyline is one of the most iconic photo spots in Korea. Featured in dozens of K-dramas. Day 2 of the itinerary.<div class="tip">For K-drama fans: "You'll walk through the exact alleys seen in your favorite shows."</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What are the booking and cancellation policies?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Down payment: <strong>₱18,000/pax</strong> — non-refundable</li>
+  <li>Package is non-rebookable, non-endorsable, and non-refundable</li>
+  <li>Visa denial: visa fee and processing fee are forfeited</li>
+  <li>Solo travelers strictly not allowed — minimum 2 pax per booking</li>
+  <li>Final travel voucher sent 3 days before travel date</li>
+  </ul>
+  <div class="warn">Always collect the deposit immediately after booking. Korea group visa needs 45 days lead time — late bookings risk visa timeline problems.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">What do COEX Mall and Starfield Library have to offer?</span><span class="fico">+</span></div>
+  <div class="fa">COEX is one of Asia's largest underground shopping malls in Gangnam. Inside COEX is the <strong>Starfield Library</strong> — a stunning public library with floor-to-ceiling bookshelves, open to all visitors and completely free. It's one of the most Instagrammable indoor spaces in Seoul. Also inside COEX: K-pop merchandise stores, food court, cinema, and luxury brands. Great free time stop on Day 3.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What should agents remind clients to prepare before Korea?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Documents:</strong> Valid passport · PH e-Travel (etravel.gov.ph, 72hrs before departure) · Korea Group Visa requirements submitted 45 days before · Final travel voucher.<br><br><strong>Money:</strong> ₱1,620 PH Travel Tax · Tips ₱300/pax/day · Travel Insurance (mandatory) · Fuel Surcharge (confirm with team) · Extra spending money for Myeongdong shopping, K-beauty, and street food.<br><br><strong>For December:</strong> Heavy winter jacket · Thermal underlayers · Waterproof gloves · Warm boots · Budget for ski equipment rental.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">What are the Korea flight details and what should provincial passengers know?</span><span class="fico">+</span></div>
+  <div class="fa">Via <strong>Cebu Pacific (5J)</strong>. Reference schedules: Most dates ETA MNL-ICN 02:05–07:20 / Return ICN-MNL 01:15–04:35. May 16–21: ETA 12:10–05:20 / Return 02:15–05:40.
+  <div class="warn">For provincial clients: arrive at NAIA at least <strong>10 hours before departure</strong>. The Korea flight departs around 02:05 AM — provincial travelers must be in Manila by 4 PM the day before.</div></div></div>
+
+  <div class="acard">
+    <h3>✅ Korea Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Submit <strong>Group Visa requirements</strong> (COE, ITR, bank docs, IDs) at least <strong>45 days before travel</strong></div></li>
+      <li><div class="sdot">2</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">3</div><div>Prepare <strong>₱1,620 PH Travel Tax</strong> — paid at TIEZA airport counter</div></li>
+      <li><div class="sdot">4</div><div>Purchase <strong>Travel Insurance</strong> — mandatory for Korea entry</div></li>
+      <li><div class="sdot">5</div><div>Budget <strong>₱300/pax/day in tips</strong> for the English-speaking guide (~₱1,200 total)</div></li>
+      <li><div class="sdot">6</div><div><strong>December travelers:</strong> Heavy winter jacket, thermal layers, waterproof gloves and boots. Budget for ski equipment rental.</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="destination" id="tokyo">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&q=80" alt="Tokyo Japan">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Memorable Japan: Tokyo</h2>
+      <p>5 Days · 4 Nights · via Cebu Pacific · Aug 2026 – Jun 2027</p>
+      <div class="dtags">
+        <span class="dtag">From PHP 72,999/pax</span>
+        <span class="dtag">Japan Group E-Visa Required (₱6,500)</span>
+        <span class="dtag">Senso-ji · Shibuya · Mt. Fuji · Skytree</span>
+        <span class="dtag">Optional Disneyland/DisneySea</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Shibuya_Scramble_Crossing.jpg/800px-Shibuya_Scramble_Crossing.jpg" alt="Shibuya Crossing"><div class="pcard-lbl">Shibuya Crossing — Day 2</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sensoji_Asakusa.jpg/800px-Sensoji_Asakusa.jpg" alt="Senso-ji Temple"><div class="pcard-lbl">Senso-ji Temple, Asakusa — Day 2</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Oshino_Hakkai_with_Fuji.jpg/800px-Oshino_Hakkai_with_Fuji.jpg" alt="Mt. Fuji Oshino Hakkai"><div class="pcard-lbl">Oshino Hakkai — Mt. Fuji View (Day 3)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tokyo_Sky_Tree_2012.JPG/480px-Tokyo_Sky_Tree_2012.JPG" alt="Tokyo Skytree"><div class="pcard-lbl">Tokyo Skytree — Day 2</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600&q=80" alt="Gotemba Premium Outlets"><div class="pcard-lbl">Gotemba Premium Outlets — Day 3</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=600&q=80" alt="Tokyo cherry blossoms"><div class="pcard-lbl">Cherry Blossoms (Mar–Apr) — Peak Season</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 3,000 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 35,000 / pax</span>
+    <span>Japan E-Visa</span><span class="comm-pill">PHP 6,500 / pax (excluded)</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">Aug 27–31 / Jun 10–14</div><div class="rv">₱72,999</div><div class="rs">Lowest rate · no surcharge</div></div>
+    <div class="rcard"><div class="rl">Feb / Apr 22–26 / May</div><div class="rv">₱78,999</div><div class="rs">+₱6,000 surcharge</div></div>
+    <div class="rcard"><div class="rl">Mar–Apr 12 (Sakura)</div><div class="rv">₱85,999</div><div class="rs">Cherry blossom season</div></div>
+    <div class="rcard"><div class="rl">Dec 21–25</div><div class="rv">₱91,999</div><div class="rs">Holiday season</div></div>
+    <div class="rcard"><div class="rl">Dec 24–29</div><div class="rv">₱104,999</div><div class="rs">Christmas peak</div></div>
+    <div class="rcard"><div class="rl">Single Supplement</div><div class="rv">₱35,499</div><div class="rs">Solo room add-on</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is included and NOT included in the Tokyo package?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>INCLUDED:</strong> Roundtrip airfare via Cebu Pacific · 7kg hand carry only · 4 nights hotel (Henn-na Hotel Asakusa / Hotel Monday Asakusa or similar) · Meals: 4B-2L-2D · Private coach · Filipino escort + English guide.<br><br><strong>NOT INCLUDED:</strong> Check-in baggage (request at booking — ₱1,800/way for 20kg) · PH Travel Tax ₱1,620 · Tipping ₱1,625/pax (mandatory) · Travel Insurance (mandatory) · Japan Group E-Visa ₱6,500 · Fuel Surcharge (mandatory) · Disneyland/DisneySea (optional: USD 180 ticket / USD 240 with transfer).
+  <div class="warn">Always advise clients to request check-in baggage AT BOOKING. At-airport rate (₱3,500/way) is nearly double the advance rate (₱1,800/way).</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">What is the complete 5-day Tokyo itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1:</strong> Manila → Tokyo (Narita) → Hotel check-in</li>
+  <li><strong>Day 2:</strong> Asakusa Senso-ji Temple → Nakamise Shopping Street → Tokyo Skytree (photo stop) → Imperial Palace (photo stop) → Duty-Free Shopping → Shibuya Crossing → Hachiko Statue</li>
+  <li><strong>Day 3:</strong> Mt. Fuji Viewing Area → Oshino Hakkai (8 sacred spring ponds, Fuji reflection) → Earthquake Museum Shop → Gotemba Premium Outlets (Japan's largest outlet mall)</li>
+  <li><strong>Day 4:</strong> Free morning OR <strong>Optional: Tokyo Disneyland or DisneySea</strong> (USD 180 ticket only / USD 240 with RT transfer for 20+ pax)</li>
+  <li><strong>Day 5:</strong> Breakfast → Airport transfer → Manila departure</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">What is the best season to visit Tokyo? How should agents pitch each date?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <div class="month-grid">
+    <div class="mb mb-good">Aug<label>Summer ☀️</label></div>
+    <div class="mb mb-good">Feb<label>Winter ❄️</label></div>
+    <div class="mb mb-best">Mar<label>🌸 Sakura</label></div>
+    <div class="mb mb-best">Apr<label>🌸 Sakura</label></div>
+    <div class="mb mb-good">May<label>Spring</label></div>
+    <div class="mb mb-peak">Dec<label>🎄 Xmas</label></div>
+  </div>
+  <ul>
+  <li>🌸 <strong>Mar–Apr (Sakura) — ₱85,999:</strong> Cherry blossoms everywhere — the most iconic Japan experience. Most popular. Book 3–4 months in advance. Visa processing must start immediately.</li>
+  <li>☀️ <strong>Aug (Summer) — ₱72,999:</strong> Best price. Hot (30–35°C) but great for budget-conscious clients. Festivals and fireworks in August.</li>
+  <li>🎄 <strong>Dec 21–25 — ₱91,999:</strong> Tokyo transforms with Christmas illuminations. Roppongi, Marunouchi, Shinjuku light displays are breathtaking.</li>
+  <li>❄️ <strong>Feb — ₱78,999:</strong> Cold but clear. No crowds. Mt. Fuji most visible in winter — best Fuji photos.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">How do agents sell the Tokyo package? Strongest pitching hooks?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>🚦 <strong>Shibuya Crossing:</strong> Show the video — thousands of people crossing at once. Clients who've seen this on social media specifically want to experience it live.</li>
+  <li>⛩️ <strong>Senso-ji Temple, Asakusa:</strong> Tokyo's most iconic temple — the giant red lantern gate. Every client recognizes this image.</li>
+  <li>🗻 <strong>Oshino Hakkai + Mt. Fuji Day 3:</strong> The perfect Fuji reflection shot in the sacred spring ponds. Gotemba Outlets is a huge bonus for shoppers — 200+ brands at outlet prices.</li>
+  <li>🎡 <strong>Day 4 Disneyland/DisneySea upsell:</strong> "Most clients on Day 4 go to Disney — which park would you prefer?" Offer it at booking. USD 240 with transfer is the most convenient option.</li>
+  <li>🤖 <strong>Henn-na Hotel:</strong> "You're staying at Japan's famous Robot Hotel!" The robot front desk is a great talking point for tech-curious clients.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">What are the Japan Group E-Visa requirements?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Visa Fee: ₱6,500/pax</strong> (subject to change). Required documents:
+  <ul>
+  <li>Valid passport — minimum <strong>6 months validity</strong> from departure date</li>
+  <li>Photocopy of passport bio page with signature</li>
+  <li>Accomplished Visa Application Form</li>
+  <li>Two (2) recent photos — <strong>4.5cm x 3.5cm</strong></li>
+  <li>PSA Authorization Letter (signature only)</li>
+  <li>First-time Japan applicants: Original PSA Birth Certificate + Marriage Certificate (if married)</li>
+  </ul>
+  <strong>Timeline: Apply 46–90 days before departure.</strong> Submit docs within 5 working days of booking. No previous Japan visa denials or overstay. First-come, first-served.
+  <div class="red">Visa DENIED = guarantee deposit (₱35,000) is FORFEITED. Name change only allowed if ticket not yet issued.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">Is Disneyland or DisneySea included? Which one should agents recommend?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>NOT in base price — optional tour on Day 4:</strong><ul>
+  <li><strong>USD 180/pax:</strong> Ticket only — clients go on their own</li>
+  <li><strong>USD 240/pax:</strong> Ticket + roundtrip hotel transfer (for 20+ pax)</li>
+  </ul>
+  <strong>Which park to recommend:</strong><ul>
+  <li><strong>Tokyo Disneyland:</strong> Classic rides and characters — best for families with young children</li>
+  <li><strong>Tokyo DisneySea:</strong> Adventure-themed, more immersive, more adult-oriented. Has Indiana Jones, Sindbad, Tower of Terror. Generally preferred by adult groups.</li>
+  </ul>
+  <div class="tip">Always offer this at booking: "Most clients use Day 4 for Disney — which park would you prefer?" Collecting this upfront avoids last-minute coordination.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">How does check-in baggage work? Why must clients request it early?</span><span class="fico">+</span></div>
+  <div class="fa">Tokyo package includes <strong>7kg hand carry only</strong>. Check-in baggage pricing tiers:<ul>
+  <li><strong>Before departure / at issuance:</strong> ₱1,800/way (20kg) · ₱3,500/way (32kg)</li>
+  <li><strong>Less than 48 hours before:</strong> ₱2,500/way (20kg) · ₱3,600/way (32kg)</li>
+  <li><strong>At airport check-in:</strong> ₱3,500/way (20kg only)</li>
+  </ul>
+  <div class="warn">Going from ₱1,800 to ₱3,500 is a ₱1,700 loss per way — ₱3,400 roundtrip. That's money wasted. Always advise clients at booking time.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">What is Oshino Hakkai and why is it included?</span><span class="fico">+</span></div>
+  <div class="fa">Oshino Hakkai is a cluster of 8 sacred spring ponds at the foot of Mt. Fuji, fed by snowmelt from the mountain. The crystal-clear water reflects the silhouette of Mt. Fuji — one of the best Fuji photo spots in Japan. The ponds are a UNESCO World Heritage component, surrounded by traditional thatched-roof farmhouses.<div class="tip">Winter (Feb) and spring (Mar–Apr) are the best seasons to see Mt. Fuji clearly — summer often has cloud cover. Use the Fuji viewing angle hard when selling those months.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">What are clients' most frequently asked questions about Tokyo?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <strong>Q: Can we visit Akihabara?</strong> Not in the official itinerary, but Day 4 free time allows independent exploration. Akihabara is a short train ride from Asakusa.<br><br>
+  <strong>Q: Is Gotemba really an outlet mall?</strong> Yes — Gotemba Premium Outlets has 210+ international and Japanese brands at outlet prices. Very popular with shoppers.<br><br>
+  <strong>Q: How close is the hotel to Senso-ji?</strong> Both Henn-na Hotel and Hotel Monday Asakusa are walking distance from Senso-ji Temple.<br><br>
+  <strong>Q: How much spending money should we bring?</strong> At minimum USD 200–300 for meals, transport, and shopping not covered. Japan is largely cash-based — bring Japanese Yen.<br><br>
+  <strong>Q: Can we ride the Shinkansen?</strong> Not in this package — private coach only. Shinkansen is in the combo packages.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What are the payment and cancellation terms?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Guarantee deposit: <strong>₱35,000/pax</strong> — non-refundable, pay within <strong>3 business days</strong> of Confirmation Invoice</li>
+  <li>Full payment: <strong>30 days before departure</strong> (if booked under 1 month, pay within 3 days)</li>
+  <li>Package is non-refundable, non-rebookable, non-endorsable</li>
+  <li>Visa denial → deposit FORFEITED · Date transfer → NOT allowed after deposit · Immigration failure → package non-refundable</li>
+  </ul>
+  <div class="tip">For Japan packages, always collect the deposit immediately — visa processing (46–90 days) must begin right after booking. Late deposits delay everything.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">Why is travel insurance critical for Japan?</span><span class="fico">+</span></div>
+  <div class="fa">Travel insurance is <strong>mandatory</strong> and NOT in the package price. Japan has among the highest medical costs in the world — a single hospital night can cost USD 1,000–3,000+. Common scenarios: food poisoning, twisted ankle from walking, allergic reaction. Always strongly recommend it.
+  <div class="warn">If a client declines travel insurance, document that they were advised. Some agents make it a firm requirement before accepting a booking — a sound practice for Japan.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What are the Tokyo flights and what should provincial passengers know?</span><span class="fico">+</span></div>
+  <div class="fa">Via <strong>Cebu Pacific (5J)</strong>. Key schedules: Aug: 5J 5054 MNL-NRT 06:10–11:35 / Return 5J 5057 NRT-MNL 19:25–23:35. Dec 24–28: 5J 5054 MNL-NRT 12:30–18:10 / Return 5J 5055 NRT-MNL 13:45–18:10. Feb–May: 5J 5054 MNL-NRT 06:40–12:25 / Return 5J 5055 13:45–18:10.<div class="warn">Provincial clients must arrive at NAIA at least 10 hours before departure. Final travel voucher sent 3 days before travel.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">What are the child and infant rates for Tokyo?</span><span class="fico">+</span></div>
+  <div class="fa">Child without bed (7 y/o and below): ₱69,499 (Aug/Jun) · ₱75,999 (Feb/Apr22-26/May) · ₱82,499 (Mar–Apr) · ₱88,999 (Dec 21–25) · ₱101,999 (Dec 24–29). Infant (23 months and below): ~₱20,499 estimated. Child at other child rate: subject for request — confirm with team.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What do clients need to prepare before the Tokyo trip?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Documents:</strong> Valid passport (6+ months validity) · Japan E-Visa (apply 46–90 days before) · PH e-Travel registration (etravel.gov.ph, 72hrs before departure) · Final travel voucher.<br><br><strong>Money per pax:</strong> PH Travel Tax ₱1,620 · Japan E-Visa ₱6,500 · Tipping ₱1,625 · Travel Insurance · Fuel Surcharge (confirm with team) · Check-in baggage ₱1,800/way (if requested at booking) · Disney optional USD 180–240 · Personal spending USD 200–300 minimum.<br><br><strong>Pack:</strong> Comfortable walking shoes (Tokyo = lots of walking) · Portable WiFi or Japan SIM · Cash in JPY (many shops are cash-only) · Light layers for spring/autumn · Heavy coat for winter dates.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">What happens if a client cannot pass immigration at the Japan airport?</span><span class="fico">+</span></div>
+  <div class="fa">If a passenger is unable to clear immigration at any international airport, the <strong>entire tour package cost is non-refundable</strong>. Immigration decisions are at the sole discretion of the officer. This is why complete and accurate documents are critical before departure — and why travel insurance is essential.
+  <div class="red">Always communicate this risk clearly to clients before booking, especially for first-time Japan travelers.</div></div></div>
+
+  <div class="acard">
+    <h3>✅ Tokyo Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Submit <strong>Japan Group E-Visa</strong> requirements — apply <strong>46–90 days before departure</strong></div></li>
+      <li><div class="sdot">2</div><div>Request <strong>check-in baggage at booking</strong> — ₱1,800/way (20kg). Don't wait — it gets more expensive closer to the trip.</div></li>
+      <li><div class="sdot">3</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">4</div><div>Purchase <strong>Travel Insurance</strong> — mandatory. Japan medical costs are extremely high.</div></li>
+      <li><div class="sdot">5</div><div>Prepare <strong>₱1,620 PH Travel Tax</strong> and <strong>₱1,625 tipping</strong></div></li>
+      <li><div class="sdot">6</div><div>Bring <strong>Japanese Yen cash</strong> — many places in Japan don't accept foreign cards</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="destination" id="osaka">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1589452271712-64b8a66c7b71?w=900&q=80" alt="Osaka Japan">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Memorable Japan: Osaka</h2>
+      <p>5 Days · 4 Nights · via Cebu Pacific · Sep 2026 – Jun 2027</p>
+      <div class="dtags">
+        <span class="dtag">From PHP 72,999/pax</span>
+        <span class="dtag">Japan Group E-Visa Required (₱6,500)</span>
+        <span class="dtag">Fushimi Inari · Arashiyama · Nara · Dotonbori</span>
+        <span class="dtag">Kimono + Matcha Experience Included</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Fushimi_Inari-taisha%2C_Kyoto.jpg/800px-Fushimi_Inari-taisha%2C_Kyoto.jpg" alt="Fushimi Inari"><div class="pcard-lbl">Fushimi Inari — 1,000 Torii Gates (Day 2)</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Arashiyama_bamboo_grove.jpg/480px-Arashiyama_bamboo_grove.jpg" alt="Arashiyama Bamboo Grove"><div class="pcard-lbl">Arashiyama Bamboo Grove + Kimono (Day 2)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Deer_in_Nara.jpg/800px-Deer_in_Nara.jpg" alt="Nara Deer Park"><div class="pcard-lbl">Nara Deer Park — Free-roaming deer (Day 3)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dotonbori_Osaka_2018.jpg/800px-Dotonbori_Osaka_2018.jpg" alt="Dotonbori Osaka"><div class="pcard-lbl">Dotonbori & Shinsaibashi (Day 3)</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=600&q=80" alt="Osaka Castle"><div class="pcard-lbl">Osaka Castle Photo Stop (Day 3)</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=600&q=80" alt="Japan autumn foliage"><div class="pcard-lbl">Kyoto Autumn Foliage (Nov) — Peak Season</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 3,000 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 35,000 / pax</span>
+    <span>Japan E-Visa</span><span class="comm-pill">PHP 6,500 / pax (excluded)</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">Sep 15–19 / Jun 8–12</div><div class="rv">₱72,999</div><div class="rs">Lowest rate</div></div>
+    <div class="rcard"><div class="rl">Nov / Dec 8–12 / Feb / May</div><div class="rv">₱78,999</div><div class="rs">Autumn & winter</div></div>
+    <div class="rcard"><div class="rl">Mar 31–Apr 10 (Sakura)</div><div class="rv">₱85,999</div><div class="rs">Cherry blossom peak</div></div>
+    <div class="rcard"><div class="rl">Dec 17–21</div><div class="rv">₱91,999</div><div class="rs">Pre-Christmas</div></div>
+    <div class="rcard"><div class="rl">Dec 25–29</div><div class="rv">₱104,999</div><div class="rs">Christmas peak</div></div>
+    <div class="rcard"><div class="rl">Single Supplement</div><div class="rv">₱35,499</div><div class="rs">Solo room add-on</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is the complete Osaka 5-day itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1:</strong> Manila → Osaka (KIX) → Hotel check-in (Awina / Agora / Five or similar)</li>
+  <li><strong>Day 2 — Kyoto:</strong> Fushimi Inari Shrine (thousand torii gates) → Kiyomizu Shopping Street → <strong>Arashiyama Bamboo Grove with Matcha & Kimono experience</strong></li>
+  <li><strong>Day 3 — Nara:</strong> Osaka Castle (photo stop) → Nara Deer Park → Todai-ji Temple → Dotonbori & Shinsaibashi</li>
+  <li><strong>Day 4:</strong> Breakfast → Free time → <strong>Optional: Universal Studios Japan</strong> (USD 180 ticket / USD 240 with RT transfer for 20+ pax)</li>
+  <li><strong>Day 5:</strong> Breakfast → Airport → Manila departure</li>
+  </ul>
+  <div class="tip">Flights: 5J 828 MNL-KIX 13:25–18:40 / Return 5J 827 KIX-MNL 19:55–23:35 (2026). 2027: 13:10–18:20 / 19:35–23:10.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">What is the best season to visit Osaka, Kyoto, and Nara?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <div class="month-grid">
+    <div class="mb mb-good">Sep<label>Early Fall</label></div>
+    <div class="mb mb-best">Nov<label>🍂 Foliage</label></div>
+    <div class="mb mb-good">Dec<label>Winter ❄️</label></div>
+    <div class="mb mb-good">Feb<label>Winter</label></div>
+    <div class="mb mb-best">Mar–Apr<label>🌸 Sakura</label></div>
+    <div class="mb mb-good">May–Jun<label>Spring</label></div>
+  </div>
+  <ul>
+  <li>🌸 <strong>Mar 31–Apr 10 (Sakura) — ₱85,999:</strong> Cherry blossoms at Fushimi Inari, Arashiyama, and Osaka Castle. Magical. Book months in advance.</li>
+  <li>🍂 <strong>November (Autumn Foliage) — ₱78,999:</strong> Kyoto and Nara in blazing fall colors. Often considered more spectacular than sakura season for Kyoto.</li>
+  <li>☀️ <strong>Sep 15–19 / Jun 8–12 — ₱72,999:</strong> Best price, warm and comfortable. Great for budget-conscious clients.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">How do agents sell the Osaka package? Strongest hooks?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>⛩️ <strong>Fushimi Inari Shrine — Thousand Torii Gates:</strong> The most recognized Japan landmark on social media — thousands of vermillion gates lining a mountain trail. Show the photo and clients immediately want to go.</li>
+  <li>🎍 <strong>Arashiyama Bamboo Grove + Kimono + Matcha:</strong> Three iconic Japan experiences in one stop. Show a photo of someone in kimono in the bamboo grove — it goes viral. This combination is the #1 reason clients choose Osaka over Tokyo.</li>
+  <li>🦌 <strong>Nara Deer Park:</strong> Hundreds of free-roaming friendly deer that bow for food. Absolutely loved by families, couples, and animal lovers.</li>
+  <li>🌃 <strong>Dotonbori at night:</strong> Giant neon signs, street food, the Glico running man billboard — the quintessential Osaka street experience.</li>
+  <li>🎭 <strong>More cultural depth than Tokyo:</strong> For clients who've been to Tokyo or want a traditional Japan experience, Osaka is the clear choice.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">What is the Arashiyama Bamboo Grove + Kimono + Matcha experience?</span><span class="fico">+</span></div>
+  <div class="fa">Day 2 in Kyoto includes three experiences at Arashiyama:<ul>
+  <li><strong>Bamboo Grove:</strong> A path through towering bamboo creating a cathedral-like canopy — one of the most photographed spots in Japan</li>
+  <li><strong>Kimono Experience:</strong> Clients dress in a traditional Japanese kimono for photos — included in the package. Filipino clients absolutely love this.</li>
+  <li><strong>Matcha Experience:</strong> Traditional Japanese green tea ceremony or tasting</li>
+  </ul>
+  <div class="tip">Pitch: "In one morning, you try on a kimono, walk through a bamboo forest, and drink matcha by the river — it's the most photographed morning in Japan."</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">Is Universal Studios Japan (USJ) included? How does the upsell work?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>NOT in base price — optional on Day 4:</strong><ul>
+  <li><strong>USD 180/pax:</strong> Ticket only, no transfer</li>
+  <li><strong>USD 240/pax:</strong> Ticket + roundtrip hotel transfer (20+ pax)</li>
+  </ul>
+  <strong>USJ highlights:</strong> Wizarding World of Harry Potter (Hogsmeade, Butterbeer, Hogwarts ride) · Nintendo World (Mario Kart, most popular new attraction) · Minion Park · Jurassic Park · Despicable Me.<div class="tip">For most Filipino clients under 40, USJ is worth every peso. Pitch it at booking: "Day 4 is free — most clients use it for USJ. Want me to add that?"</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">Tokyo vs. Osaka — which should agents recommend?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>RECOMMEND OSAKA TO:</strong><ul>
+  <li>Clients who love history, temples, and traditional culture</li>
+  <li>Clients who've already been to Tokyo and want "the other Japan"</li>
+  <li>Food lovers — Osaka is Japan's food capital. Dotonbori, street food, takoyaki, ramen.</li>
+  <li>Instagram-focused travelers — Fushimi Inari and Arashiyama Bamboo are the most shared Japan photos</li>
+  </ul>
+  <strong>RECOMMEND TOKYO TO:</strong><ul>
+  <li>First-time Japan visitors who want modern iconic Japan</li>
+  <li>Disney fans or those who want the Disneyland/DisneySea experience</li>
+  <li>Tech and pop culture enthusiasts (Akihabara, Shibuya, Harajuku)</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">What are the Japan Group E-Visa requirements for Osaka?</span><span class="fico">+</span></div>
+  <div class="fa">Identical to Tokyo: <strong>Fee ₱6,500/pax</strong>. Submit: valid passport (6 months validity from departure) · passport bio page photocopy with signature · accomplished visa application form · 2 photos (4.5cm x 3.5cm) · PSA Authorization Letter. First-timers: PSA Birth Certificate + Marriage Certificate if married. <strong>Apply 46–90 days before departure. Submit docs within 5 working days of booking.</strong>
+  <div class="red">Visa denial = ₱35,000 guarantee deposit FORFEITED.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">What is Nara Deer Park? Is it safe?</span><span class="fico">+</span></div>
+  <div class="fa">Nara Deer Park is home to hundreds of free-roaming deer considered <strong>national treasures</strong> in Japan. Visitors can feed, pet, and photograph them. The deer have learned to bow their heads to ask for food — clients love capturing this on video. Generally safe, but remind clients to hide food bags after feeding as deer may push to find more. Combined with Todai-ji Temple (Japan's largest wooden building, housing an enormous bronze Buddha), Day 3 is usually clients' favorite day of the Osaka trip.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">What is Dotonbori and why do clients love it?</span><span class="fico">+</span></div>
+  <div class="fa">Dotonbori is Osaka's most famous entertainment and food district, famous for its massive neon signs, street food, and the iconic Glico running man billboard. Clients can try: takoyaki (octopus balls) · okonomiyaki (savory pancake) · fresh seafood · ramen. Right next door is Shinsaibashi shopping street — K-beauty, fashion, and souvenirs. The energy here at night is electric. Day 3 — after the included dinner, clients have free time to explore on their own.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What are clients' frequently asked questions about the Osaka package?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <strong>Q: Is Osaka Castle entrance included?</strong> Osaka Castle is a photo stop — the exterior and grounds are visited. Castle interior is at clients' own option.<br><br>
+  <strong>Q: Can we try street food in Dotonbori?</strong> Yes — free time in Dotonbori after Day 3 included dinner. Budget ₱500–1,500 for street snacks and drinks.<br><br>
+  <strong>Q: What is Kiyomizu Shopping Street?</strong> A traditional shopping lane leading up Kiyomizu-dera Temple in Kyoto — lined with souvenir shops, matcha snacks, and crafts.<br><br>
+  <strong>Q: What can we do on Day 4 if not going to USJ?</strong> Free time to explore Osaka — Osaka Aquarium, Shinsekai area, Namba Walks, or Kuromon Market are popular options.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">What are the payment and cancellation terms for Osaka?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Guarantee deposit: <strong>₱35,000/pax</strong> — non-refundable, pay within 3 business days of Confirmation Invoice</li>
+  <li>Full payment: 30 days before departure (3 days if booked under 1 month out)</li>
+  <li>Package is non-refundable, non-rebookable</li>
+  <li>Visa denial → deposit FORFEITED (name change allowed if ticket not issued)</li>
+  <li>Date transfer → not allowed after deposit</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What unique photo opportunities does Osaka have for social media?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>📸 <strong>Fushimi Inari torii gates tunnel:</strong> Thousands of vermillion gates — the most shared Japan photo worldwide</li>
+  <li>🎍 <strong>Arashiyama Bamboo Grove:</strong> Towering bamboo creating a cathedral canopy — beautiful in morning light</li>
+  <li>👘 <strong>Kimono experience:</strong> Traditional kimono photos in the bamboo grove backdrop — Filipino clients love sharing this</li>
+  <li>🦌 <strong>Nara deer selfies:</strong> Deer bowing or being surrounded by deer — very viral and shareable</li>
+  <li>🌃 <strong>Dotonbori at night:</strong> Glico man, giant crab sign, neon-lit canal reflections</li>
+  </ul>
+  <div class="tip">Use these photos in your group chats and social media posts. Osaka has arguably more "viral" photo spots than Tokyo.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">What is included in the Osaka package (full list)?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>INCLUDED:</strong> Roundtrip airfare via Cebu Pacific · 7kg hand carry only · 4 nights hotel (Awina / Agora / Five or similar in Osaka) · Meals: 4B-2L-2D · Private coach transfers · Filipino escort + English guide · Kimono & Matcha experience at Arashiyama · All tours as per itinerary.<br><br><strong>NOT INCLUDED:</strong> Check-in baggage (₱1,800/way at booking) · PH Travel Tax ₱1,620 · Tipping ₱1,625/pax (mandatory) · Travel Insurance (mandatory) · Japan E-Visa ₱6,500 · Fuel Surcharge · USJ optional (USD 180–240).</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What are the child and infant rates for Osaka?</span><span class="fico">+</span></div>
+  <div class="fa">Child without bed (7 y/o and below): ₱69,499 (Sep/Jun) · ₱75,999 (Nov/Dec8-12/Feb/May) · ₱82,499 (Mar31–Apr10) · ₱88,999 (Dec 17–21) · ₱101,999 (Dec 25–29). Infant (23 months and below): ~₱20,499 estimated. All rates exclusive of tax.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">What should clients pack and prepare for the Osaka trip?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Documents:</strong> Valid passport (6+ months validity) · Japan E-Visa · PH e-Travel registration · Final travel voucher.<br><br><strong>Money:</strong> PH Travel Tax ₱1,620 · E-Visa ₱6,500 · Tipping ₱1,625 · Fuel Surcharge (confirm with team) · Travel Insurance · Check-in baggage ₱1,800/way if needed · USJ optional USD 180–240.<br><br><strong>Pack:</strong> Comfortable walking shoes (Fushimi Inari involves stairs and uphill walking) · Light layers (Osaka/Kyoto weather varies) · JPY cash (traditional shops are cash-only) · Portable WiFi or Japan SIM.</div></div>
+
+  <div class="acard">
+    <h3>✅ Osaka Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Submit <strong>Japan Group E-Visa</strong> requirements — apply <strong>46–90 days before departure</strong></div></li>
+      <li><div class="sdot">2</div><div>Request <strong>check-in baggage at booking</strong> — ₱1,800/way (20kg). Much cheaper than at the airport.</div></li>
+      <li><div class="sdot">3</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">4</div><div>Bring <strong>comfortable walking shoes</strong> — Fushimi Inari involves stairs. Not the trip for heels.</div></li>
+      <li><div class="sdot">5</div><div>Bring <strong>JPY cash</strong> — many traditional shops, temples, and street food stalls are cash-only</div></li>
+      <li><div class="sdot">6</div><div>Purchase <strong>Travel Insurance</strong> — mandatory and critical for Japan</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="destination" id="combo">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=80" alt="Tokyo Osaka Japan Combo">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Memorable Japan: Tokyo – Osaka Combo</h2>
+      <p>6D5N via Cebu Pacific · 8D6N via Japan Airlines · 2026–2027</p>
+      <div class="dtags">
+        <span class="dtag">6D5N from PHP 124,999 · 8D6N from PHP 130,999</span>
+        <span class="dtag">BOTH Disneyland + USJ Included</span>
+        <span class="dtag">8D JAL: 2×23kg Baggage Included</span>
+        <span class="dtag">PHP 6,000 Agent Commission</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Lake_Kawaguchiko_with_Mount_Fuji.jpg/800px-Lake_Kawaguchiko_with_Mount_Fuji.jpg" alt="Lake Kawaguchi Mt Fuji"><div class="pcard-lbl">Lake Kawaguchi — Mt. Fuji View (8D JAL only)</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Great_Buddha_of_Kamakura.jpg/800px-The_Great_Buddha_of_Kamakura.jpg" alt="Kamakura Great Buddha"><div class="pcard-lbl">Kamakura Great Buddha (8D JAL only)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Yokohama_Chinatown_gate.jpg/640px-Yokohama_Chinatown_gate.jpg" alt="Yokohama Chinatown"><div class="pcard-lbl">Yokohama Chinatown (8D JAL only)</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Arashiyama_bamboo_grove.jpg/480px-Arashiyama_bamboo_grove.jpg" alt="Arashiyama Bamboo Forest"><div class="pcard-lbl">Arashiyama Bamboo Forest (Both packages)</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80" alt="Tokyo DisneySea"><div class="pcard-lbl">Tokyo Disneyland or DisneySea — Included!</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?w=600&q=80" alt="Universal Studios Japan"><div class="pcard-lbl">Universal Studios Japan — Included!</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 6,000 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 50,000 / pax</span>
+    <span>Both Parks</span><span class="comm-pill">Disneyland + USJ Included</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">6D5N · Feb/Jun (5J)</div><div class="rv">₱124,999</div><div class="rs">Cebu Pacific · 7kg carry-on</div></div>
+    <div class="rcard"><div class="rl">6D5N · Apr/May (5J)</div><div class="rv">₱130,999</div><div class="rs">Spring season</div></div>
+    <div class="rcard"><div class="rl">6D5N · Mar31–Apr6 (5J)</div><div class="rv">₱137,999</div><div class="rs">Cherry blossom peak</div></div>
+    <div class="rcard"><div class="rl">6D5N · Dec 23–29 (5J)</div><div class="rv">₱156,999</div><div class="rs">Holiday peak</div></div>
+    <div class="rcard"><div class="rl">8D6N · Sep 9–16 (JAL)</div><div class="rv">₱130,999</div><div class="rs">2×23kg baggage · min.30pax</div></div>
+    <div class="rcard"><div class="rl">8D6N · Nov25–Dec2 (JAL)</div><div class="rv">₱137,999</div><div class="rs">+₱7,000 surcharge · 2×23kg</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is the key difference between the 6D5N (Cebu Pacific) and 8D6N (JAL) packages?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>6D5N via Cebu Pacific (from ₱124,999):</strong><ul>
+  <li>7kg carry-on only — no free check-in baggage</li>
+  <li>5 nights hotel</li>
+  <li>Both Disneyland/DisneySea AND USJ tickets included</li>
+  <li>Covers: Tokyo → Mt. Fuji → Nagoya/Gifu → Kyoto → Osaka</li>
+  </ul>
+  <strong>8D6N via Japan Airlines (from ₱130,999):</strong><ul>
+  <li><strong>2×23kg check-in baggage + 7kg carry-on INCLUDED</strong></li>
+  <li>6 nights hotel · more destinations</li>
+  <li>Both Disneyland/DisneySea AND USJ tickets included</li>
+  <li>Extra stops: Kamakura Great Buddha, Yokohama Chinatown, Ramen Museum, Kawaguchiko (Mt. Fuji lake)</li>
+  <li>More meals: 6B-4L-4D</li>
+  </ul>
+  <div class="warn">JAL 8D package has airline taxes (~₱11,570/pax) excluded — always add to client's total cost.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">Are BOTH Disneyland/DisneySea AND Universal Studios Japan really included?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>YES — both theme parks are included in the base price</strong> for BOTH the 6D and 8D packages. Day Pass tickets and private coach roundtrip transfers to both parks are included.
+  <div class="good">In the single-city Tokyo package, Disneyland costs USD 180–240 extra. In the single-city Osaka package, USJ costs USD 180–240 extra. In the combo packages, you get BOTH parks at no additional charge — a savings of up to USD 480 vs. buying them separately.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">What is the 6D5N Cebu Pacific itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1:</strong> Manila → Tokyo (Narita) → Shibuya Crossing → Hachiko Statue → Odaiba (Statue of Liberty, Tokyo Bay)</li>
+  <li><strong>Day 2:</strong> Tokyo Disneyland or DisneySea — full day with Day Pass + RT transfer</li>
+  <li><strong>Day 3:</strong> Asakusa Senso-ji + Nakamise Street → Tokyo Skytree → Transfer to Mt. Fuji area</li>
+  <li><strong>Day 4:</strong> Gotemba Factory Outlet → Oshino Hakkai (Mt. Fuji view) → Transfer to Nagoya/Gifu</li>
+  <li><strong>Day 5:</strong> Kyoto → Arashiyama Bamboo Forest → Fushimi Inari Shrine → Shinsaibashi/Dotonbori</li>
+  <li><strong>Day 6:</strong> Osaka Castle (photo stop) → Universal Studios Japan (full day) → Airport departure</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">What is the 8D6N Japan Airlines itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1:</strong> Manila overnight departure via JAL</li>
+  <li><strong>Day 2:</strong> Haneda arrival → Kamakura Great Buddha (Kotoku-in) → Hasedera Temple → Yokohama Chinatown → Minato Mirai → Ramen Museum → Tokyo</li>
+  <li><strong>Day 3:</strong> Tokyo Disneyland or DisneySea — full day + RT transfer</li>
+  <li><strong>Day 4:</strong> Asakusa Senso-ji → Nakamise Street → Tokyo Skytree → Shibuya Crossing → Hachiko Statue → Kawaguchiko (Mt. Fuji lake area)</li>
+  <li><strong>Day 5:</strong> Gotemba Factory Outlet → Oshino Hakkai → Nagoya</li>
+  <li><strong>Day 6:</strong> Kyoto → Arashiyama Bamboo Grove (Togetsukyo Bridge) → Fushimi Inari → Shinsaibashi/Dotonbori</li>
+  <li><strong>Day 7:</strong> Osaka Castle → Universal Studios Japan → Airport departure</li>
+  <li><strong>Day 8:</strong> Arrive Manila</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">What is the best season for the combo packages?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <div class="month-grid">
+    <div class="mb mb-good">Feb<label>Winter</label></div>
+    <div class="mb mb-best">Mar–Apr<label>🌸 Sakura</label></div>
+    <div class="mb mb-good">May<label>Spring</label></div>
+    <div class="mb mb-good">Jun<label>Early Summer</label></div>
+    <div class="mb mb-good">Sep<label>Early Fall</label></div>
+    <div class="mb mb-peak">Dec<label>🎄 Holiday</label></div>
+  </div>
+  <ul>
+  <li>🌸 <strong>Mar 31–Apr 6 (Sakura peak) — ₱137,999:</strong> Cherry blossoms at both Tokyo and Osaka/Kyoto. Most popular season. Book months in advance.</li>
+  <li>💙 <strong>Feb/Jun — ₱124,999:</strong> Best price on 6D. Winter/early summer, fewer crowds, great Fuji views.</li>
+  <li>✈️ <strong>Sep 9–16 (8D JAL) — ₱130,999:</strong> Best value for JAL combo — early autumn, pleasant weather, 2×23kg baggage included.</li>
+  <li>🎄 <strong>Dec 23–29 — ₱156,999:</strong> Most expensive but winter illuminations + holiday Japan is spectacular.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">How do agents sell the combo vs. single-city packages?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>🎢 <strong>"Both parks included — that's the deal":</strong> "In the combo, Disneyland AND USJ are already in the price. In the single packages, each park costs USD 180–240 extra. You're essentially getting both parks for free."</li>
+  <li>🗾 <strong>"See the best of Tokyo AND Osaka in one trip":</strong> First-timers don't have to choose. Shibuya + Senso-ji + Arashiyama + Dotonbori + Mt. Fuji — all in one package.</li>
+  <li>💼 <strong>"For JAL: 2×23kg baggage included":</strong> "You can shop freely — your baggage is covered. Japan shopping is incredible."</li>
+  <li>💰 <strong>"Higher commission for you":</strong> ₱6,000/pax vs. ₱3,000/pax for single-city. Push the combo — it's better for your client AND your earnings.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">Why is JAL 8D6N often the better choice?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>✈️ <strong>2×23kg check-in baggage included:</strong> Saves ₱3,600–7,200 vs. buying baggage on Cebu Pacific. Japan shopping = clients want to bring things home.</li>
+  <li>🗺️ <strong>4 extra destinations:</strong> Kamakura Great Buddha, Yokohama Chinatown, Yokohama Ramen Museum, Lake Kawaguchiko (Mt. Fuji) — not in the 6D.</li>
+  <li>🍽️ <strong>More meals:</strong> 6B-4L-4D vs. 6D's arrangement.</li>
+  <li>🛫 <strong>JAL is full-service:</strong> In-flight meals, wider seats, entertainment, reliable punctuality.</li>
+  <li>💴 <strong>Price gap narrows fast:</strong> 6D at ₱124,999 + baggage (₱3,600/way × 2 ways) = ₱131,199 — basically the same as JAL at ₱130,999. But JAL gives you more days and more destinations.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">What is NOT included in each combo package?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>6D5N via Cebu Pacific exclusions:</strong> PH Travel Tax ₱1,620 · Tipping ₱1,950/pax (mandatory) · Travel Insurance · Check-in baggage (₱1,800/way for 20kg at booking) · Japan E-Visa ₱6,500 · Fuel Surcharge.<br><br><strong>8D6N via JAL additional exclusion:</strong> Airline Taxes ~₱11,570/pax — always add to client's total cost.<div class="warn">Never quote the package price as the all-in total. Always add all mandatory fees when presenting the true cost to clients.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">What are the Japan E-Visa requirements for both combo packages?</span><span class="fico">+</span></div>
+  <div class="fa">Same for both 6D and 8D: <strong>Fee ₱6,500/pax</strong>. Required: valid passport (6 months validity) · bio page photocopy with signature · accomplished visa application form · 2 photos (4.5cm x 3.5cm) · PSA Authorization Letter · First-timers: PSA Birth Certificate + Marriage Certificate if married.<br><br><strong>Apply 46–90 days before departure. Submit docs within 5 working days of booking. First-come, first-served.</strong></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What are the payment terms for the combo packages?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Guarantee deposit: <strong>₱50,000/pax</strong> — non-refundable, pay within 3 business days of Confirmation Invoice</li>
+  <li>Full payment: 30 days before departure</li>
+  <li>Package is non-refundable, non-rebookable</li>
+  <li>Visa denial → deposit FORFEITED (name change allowed only if ticket not yet issued)</li>
+  <li>Date transfer → NOT allowed after deposit</li>
+  </ul>
+  <div class="warn">The ₱50,000 deposit is higher than single-city (₱35,000). Make sure clients are fully committed before collecting — stress the non-refundable nature clearly.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">Which park — Disneyland or DisneySea? How do agents help clients choose?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Tokyo Disneyland:</strong> Classic Disney — Cinderella Castle, Space Mountain, Haunted Mansion, Disney characters. Best for: families with young kids (5–12 y/o), classic Disney fans, first-time Disney visitors.<br><br><strong>Tokyo DisneySea:</strong> Adventure and exploration theme — Mediterranean Harbor, Mysterious Island, Lost River Delta. Unique to Japan — does not exist anywhere else in the world. Best for: adult groups, teens, couples, experience-seekers. More "sophisticated" rides (Tower of Terror, Indiana Jones, Sindbad).<div class="tip">For Filipino adult groups: almost always recommend DisneySea. The uniqueness factor is compelling — "You can visit Disneyland anywhere, but DisneySea only exists in Japan."</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What hotels are used in the combo packages?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>6D5N via Cebu Pacific:</strong> Tokyo — Granbell Shinjuku / T-Mark Omori / Monday Toyosu / Prince Sunshine or similar. Fuji area — Jiragon / Tominoko / Just One or similar. Gifu — Resol / Washington or similar. Osaka — Five / Agora Place or similar.<br><br><strong>8D6N via JAL:</strong> Tokyo — Candeo Hotels Ueno Koen / Hotel Il Fiore Kasai or similar. Kawaguchiko — Jiragonno Fuji No Yakata or similar. Nagoya — Travelodge Nagoya Sakae or similar. Osaka — Minamisenri Crystal Hotel / Sarasa Hotel Shin-Osaka or similar.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">What are the FAQs clients ask about the combo packages?</span><span class="fico">+</span></div>
+  <div class="fa">
+  <strong>Q: Do we sleep in both Tokyo AND Osaka?</strong> Yes — typically 2–3 nights in Tokyo, then 2–3 nights in the Osaka area. Hotels confirmed in travel voucher.<br><br>
+  <strong>Q: Is Kyoto a separate overnight?</strong> No — Kyoto is a day trip from Osaka. No Kyoto overnight in either package.<br><br>
+  <strong>Q: What is the Yokohama Ramen Museum?</strong> A food theme park in Yokohama dedicated to ramen — an underground replica of 1950s Japan with regional ramen shops from across the country. Only in the JAL 8D package.<br><br>
+  <strong>Q: Can we extend the trip independently?</strong> Packages are fixed group tours. Independent extensions are not part of the group. Clients who want more time can self-extend at their own cost after the group departs.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What are the flight details for both combo packages?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>6D5N Cebu Pacific (5J):</strong> Dec 23–29: 5J 5056 MNL-NRT 12:30–18:10 / Return 5J 827 KIX-MNL 19:55–23:55. Feb/Jun: 5J 5054 MNL-NRT 06:40–12:25 / Return 5J 827 KIX-MNL 19:35–23:10. Mar31–Apr6: 5J 5056 MNL-NRT 12:15–18:00.<br><br><strong>8D6N Japan Airlines (JAL):</strong> Sep 9–16: JL 078 MNL-HND 23:25–04:40+1 / Return JL 228 KIX-HND 21:00–22:25 + JL 077 HND-MNL 01:55–05:35. Nov 25–Dec 2: JL 078 MNL-HND 23:30–04:25+1 / Return JL 077 HND-MNL 01:50–05:45.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">Which combo should agents recommend and to whom?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Choose 6D5N Cebu Pacific if:</strong> Budget-conscious client · No big shopping plans · Prefers more dates to choose from · Fine with carry-on only.<br><br><strong>Choose 8D6N Japan Airlines if:</strong> Client wants to shop and buy pasalubong (2×23kg free!) · Wants more destinations (Kamakura, Yokohama, Ramen Museum, Kawaguchiko) · Prefers comfort travel on JAL · Traveling Sep or Nov — those dates only available on JAL combo.<div class="good">Agent commission is the same (₱6,000/pax) for both — recommend based on client fit, not commission preference.</div></div></div>
+
+  <div class="acard">
+    <h3>✅ Tokyo–Osaka Combo Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Submit <strong>Japan Group E-Visa</strong> requirements — apply <strong>46–90 days before departure</strong></div></li>
+      <li><div class="sdot">2</div><div><strong>6D via Cebu Pacific:</strong> Request check-in baggage at booking (₱1,800/way). Much cheaper than at airport.</div></li>
+      <li><div class="sdot">3</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">4</div><div>Pay guarantee deposit <strong>within 3 business days</strong> of Confirmation Invoice — slot will be released otherwise</div></li>
+      <li><div class="sdot">5</div><div>Budget for <strong>Airline Taxes ~₱11,570</strong> if taking the <strong>8D JAL package</strong> — excluded from package price</div></li>
+      <li><div class="sdot">6</div><div>Bring <strong>JPY cash</strong> and <strong>comfortable walking shoes</strong> — both are non-negotiable for Japan</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="destination" id="hokkaido">
+  <div class="dest-banner">
+    <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=900&q=80" alt="Hokkaido Snow Japan">
+    <div class="dest-overlay"></div>
+    <div class="dest-text">
+      <h2>Memorable Japan: Best of Hokkaido</h2>
+      <p>8 Days · 6 Nights · via Japan Airlines · Jan 31 – Feb 7, 2027 ONLY</p>
+      <div class="dtags">
+        <span class="dtag">PHP 150,999/pax · Minimum 40 pax</span>
+        <span class="dtag">2×23kg Baggage Included</span>
+        <span class="dtag">Sapporo Snow Festival · King Crab Dinner</span>
+        <span class="dtag">Penguin Parade · Rusutsu Ski Resort</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-title">Key Attractions</div>
+  <div class="pgrid">
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sapporo_Snow_Festival_2013.jpg/800px-Sapporo_Snow_Festival_2013.jpg" alt="Sapporo Snow Festival"><div class="pcard-lbl">Sapporo Snow Festival — Day 6 (Free Day!)</div></div>
+    <div class="pcard pcard-tall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Jigokudani_Noboribetsu.jpg/800px-Jigokudani_Noboribetsu.jpg" alt="Jigokudani Hell Valley"><div class="pcard-lbl">Jigokudani Hell Valley — Day 3</div></div>
+    <div class="pcard"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Otaru_canal.jpg/800px-Otaru_canal.jpg" alt="Otaru Canal"><div class="pcard-lbl">Otaru Canal — Day 7</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?w=600&q=80" alt="King Crab dinner"><div class="pcard-lbl">Unlimited King Crab Dinner — Day 5</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Penguin parade zoo"><div class="pcard-lbl">Asahiyama Zoo Penguin Parade — Day 5</div></div>
+    <div class="pcard"><img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Rusutsu Ski Resort"><div class="pcard-lbl">Rusutsu Ski Resort — Day 4</div></div>
+  </div>
+
+  <div class="comm-strip">
+    <span>💰 Commission</span><span class="comm-pill">PHP 6,000 / pax</span>
+    <span>Down Payment</span><span class="comm-pill">PHP 50,000 / pax</span>
+    <span>Minimum Group</span><span class="comm-pill">40 pax required</span>
+  </div>
+
+  <div class="rates">
+    <div class="rcard"><div class="rl">Adult / Child w/ Bed (min.40pax)</div><div class="rv">₱150,999</div><div class="rs">Jan 31 – Feb 7, 2027</div></div>
+    <div class="rcard"><div class="rl">Child w/o Bed (7 y/o & below)</div><div class="rv">₱144,499</div><div class="rs">Same travel date</div></div>
+    <div class="rcard"><div class="rl">Single Supplement</div><div class="rv">₱58,999</div><div class="rs">Solo room add-on</div></div>
+    <div class="rcard"><div class="rl">Airline Taxes (excluded)</div><div class="rv">~₱11,570</div><div class="rs">Subject to change · confirm</div></div>
+    <div class="rcard"><div class="rl">Japan E-Visa (excluded)</div><div class="rv">₱6,500</div><div class="rs">Per person · subject to change</div></div>
+    <div class="rcard"><div class="rl">Tipping (excluded)</div><div class="rv">₱1,950</div><div class="rs">Mandatory · full trip</div></div>
+  </div>
+
+  <div class="faq-title">Frequently Asked Questions for Agents</div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">01</span><span class="fqt">What is included and NOT included in the Hokkaido package?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>INCLUDED:</strong> Roundtrip airfare via Japan Airlines (JAL) · <strong>2×23kg check-in baggage + 7kg carry-on</strong> · 5 nights hotel · Meals: 6 breakfasts, 4 lunches, 4 dinners · Private coach · Fully loaded tours as per itinerary · English guide + Filipino escort.<br><br><strong>NOT INCLUDED:</strong> Airline Taxes ~₱11,570 · Japan E-Visa ₱6,500 · Tipping ₱1,950/pax (mandatory) · Travel Insurance (mandatory) · Fuel Surcharge (mandatory) · PH Travel Tax ₱1,620 · Ski equipment & suit at Rusutsu (rental on-site).
+  <div class="warn">True estimated total: ₱150,999 + ₱11,570 + ₱6,500 + ₱1,950 + ₱1,620 + fuel surcharge + insurance = ~₱172,639+ before ski rental. Always present the full breakdown to clients.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">02</span><span class="fqt">What is the complete 8-day Hokkaido itinerary?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li><strong>Day 1:</strong> Manila departure (overnight JAL flight)</li>
+  <li><strong>Day 2 — Hakodate:</strong> Arrive Hakodate → Goryokaku Tower (star-shaped fort) → Kanemori Red Brick Warehouse → Hachiman Zaka Slope → Hakodate Orthodox Church (if open) → Mt. Hakodate scenic ropeway</li>
+  <li><strong>Day 3 — Noboribetsu:</strong> Noboribetsu Date Jidaimura (samurai & ninja heritage village) → <strong>Jigokudani Hell Valley</strong> (volcanic steam vents & boiling pools) → Overnight Noboribetsu or Lake Toya</li>
+  <li><strong>Day 4 — Sapporo area:</strong> Silo Observatory Deck → <strong>Rusutsu Ski Resort</strong> (equipment NOT included) → Mitsui Factory Outlet</li>
+  <li><strong>Day 5 — Sapporo/Asahikawa:</strong> Asahikawa Sake Brewery → Asahiyama Zoo (<strong>Penguin Parade!</strong>) → <strong>Nanda Crab Buffet (Unlimited Hokkaido King Crab dinner!)</strong> → Hotel</li>
+  <li><strong>Day 6 — Sapporo:</strong> Free day — explore Sapporo or attend the <strong>Sapporo Snow Festival</strong> (ice sculptures)</li>
+  <li><strong>Day 7 — Otaru:</strong> Otaru Canal → Kitaichi Glass → Music Box Museum → Shiroi Koibito Park → Chitose Airport transfer</li>
+  <li><strong>Day 8:</strong> Depart Chitose → Arrive Manila</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">03</span><span class="fqt">Why is February the perfect time to visit Hokkaido?</span><span class="fico">+</span></div>
+  <div class="fa">February is the only month where all 5 Hokkaido winter experiences align simultaneously:
+  <div class="month-grid">
+    <div class="mb mb-hot">Mar–Oct<label>Off Season</label></div>
+    <div class="mb mb-good">Nov<label>First Snow</label></div>
+    <div class="mb mb-good">Dec<label>Deep Snow</label></div>
+    <div class="mb mb-good">Jan<label>Peak Snow</label></div>
+    <div class="mb mb-best">Feb<label>⭐ Best</label></div>
+    <div class="mb mb-hot">Rest<label>No Snow</label></div>
+  </div>
+  <ul>
+  <li>❄️ <strong>Sapporo Snow Festival:</strong> Once-a-year event, early February only</li>
+  <li>🦀 <strong>King Crab:</strong> Hokkaido king crab is at peak season in winter</li>
+  <li>🐧 <strong>Penguin Parade:</strong> Asahiyama Zoo only does this in winter months</li>
+  <li>⛷️ <strong>Rusutsu Ski:</strong> February = peak powder snow — the best in Japan</li>
+  <li>❄️ <strong>Snow scenery:</strong> Entire Hokkaido blanketed in white — otherworldly beauty</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">04</span><span class="fqt">How do agents recruit 40 pax for Hokkaido? Recruitment strategies that work?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>🦀 <strong>Lead with King Crab dinner photos:</strong> Show the unlimited Nanda Crab Buffet spread. People tag their friends immediately — the visual impact is massive.</li>
+  <li>❄️ <strong>Show Sapporo Snow Festival video:</strong> Find a YouTube video of the lit-up ice sculptures at night. Unmissable. Clients say "I need to go to this."</li>
+  <li>🐧 <strong>Penguin Parade video:</strong> 30 seconds of penguins waddling in the snow at Asahiyama Zoo. Extremely shareable — great for social media recruitment.</li>
+  <li>📣 <strong>Create urgency:</strong> "Minimum 40 pax — if we don't reach 40, the package doesn't push through. We currently have X pax — we need Y more. Who's in?"</li>
+  <li>💼 <strong>JAL + 2×23kg baggage:</strong> "You can shop freely — JAL gives you 2 bags of 23kg each. No baggage fee anxiety."</li>
+  <li>🎯 <strong>Target past Japan travelers:</strong> Clients who've been to Tokyo or Osaka are the best recruits — they already love Japan and want to see a completely different side.</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">05</span><span class="fqt">What is the Sapporo Snow Festival and why is it the centerpiece?</span><span class="fico">+</span></div>
+  <div class="fa">The <strong>Sapporo Snow Festival (Yuki Matsuri)</strong> is one of Japan's most iconic winter events, held every February. Features:<ul>
+  <li>Enormous, intricately carved ice and snow sculptures — some as tall as buildings</li>
+  <li>Multiple venues across Sapporo — Odori Park, Susukino ice sculptures</li>
+  <li>Spectacular nightly illumination of sculptures (most beautiful 6–10 PM)</li>
+  <li>International sculpting competition + food stalls + entertainment</li>
+  <li>Attracts 2 million+ visitors annually from worldwide</li>
+  </ul>
+  <strong>Day 6 is specifically kept free</strong> so clients can fully immerse themselves. This is the #1 reason this package exists.
+  <div class="tip">Show clients photos and video of the illuminated ice sculptures at night — it almost always closes the sale immediately.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">06</span><span class="fqt">What is the unlimited King Crab dinner at Nanda Crab Buffet?</span><span class="fico">+</span></div>
+  <div class="fa">On Day 5 evening in Sapporo, clients dine at the <strong>Nanda Crab Buffet</strong> — unlimited <strong>Hokkaido King Crab</strong> included in the package price. Hokkaido is famous for producing some of the world's finest, sweetest king crabs — the cold Sea of Japan waters produce exceptionally large, premium crabs. "Unlimited" means clients eat as much as they want: steamed, grilled, as sashimi, in soups.<div class="good">This dinner is consistently rated as the top highlight of the trip by returning Hokkaido travelers. Show the photo of the king crab spread — the visual is irresistible and almost always seals the deal.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">07</span><span class="fqt">What is the Penguin Parade at Asahiyama Zoo?</span><span class="fico">+</span></div>
+  <div class="fa">Asahiyama Zoo in Asahikawa hosts a famous <strong>Penguin Parade</strong> — a daily winter event where penguins walk along a snow path through the zoo grounds with zoo keepers. Completely free with zoo entrance. Only held during winter months (December–March). The penguins waddling in a line through the snow is irresistibly cute and universally loved — great for families with children and anyone who loves animals.<div class="tip">Find the Asahiyama Zoo Penguin Parade video on YouTube and share it in your group chats. 30 seconds of penguins in the snow is one of the most effective recruitment tools for this package.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">08</span><span class="fqt">What are the Japan E-Visa requirements for Hokkaido 2027?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Fee: ₱6,500/pax</strong> (subject to change). Required documents:<ul>
+  <li>Valid passport — minimum <strong>6 months validity</strong> from January 31, 2027</li>
+  <li>Photocopy of passport bio page with signature</li>
+  <li>Accomplished Visa Application Form</li>
+  <li>Two (2) recent photos — <strong>4.5cm x 3.5cm</strong></li>
+  <li>PSA Authorization Letter (signature only)</li>
+  <li>First-time Japan applicants: Original PSA Birth Certificate + Marriage Certificate (if married)</li>
+  </ul>
+  <strong>Apply by early November 2026</strong> (46–90 days before Jan 31). Submit docs within 5 working days of booking. No previous visa denials or overstay. First-come, first-served.
+  <div class="red">Guarantee deposit (₱50,000) is FORFEITED if visa is denied.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">09</span><span class="fqt">What are the payment and cancellation terms?</span><span class="fico">+</span></div>
+  <div class="fa"><ul>
+  <li>Guarantee deposit: <strong>₱50,000/pax</strong> — non-refundable, pay within 3 business days of Confirmation Invoice</li>
+  <li>Full payment: <strong>30 days before January 31</strong> (before January 1, 2027)</li>
+  <li>Package is non-refundable and non-rebookable</li>
+  <li>Visa denial → deposit FORFEITED (name change allowed only if ticket not yet issued)</li>
+  <li>If group count drops below 40 pax, pricing adjusts upward to next bracket</li>
+  <li>Final travel voucher sent 3 days before travel</li>
+  </ul></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">10</span><span class="fqt">What should clients pack for Hokkaido in February?</span><span class="fico">+</span></div>
+  <div class="fa">Hokkaido in February: <strong>0°C to –10°C (or colder with wind chill)</strong>. This is extreme cold — do NOT let clients underpack.
+  <div class="warn">Mandatory: Heavy down coat (windproof, waterproof) · Thermal underlayers top & bottom (at least 2 sets) · Waterproof snow boots (ankle-high or higher) · Thermal gloves (not fashion gloves!) · Warm scarf + thermal beanie · Hand warmers (kairo packs — buy in Japan 7-Eleven, ¥100 each) · Extra pairs of thermal socks.</div>
+  <div class="good">Good news: JAL's 2×23kg baggage means clients can pack all winter gear without baggage fee stress. This is a selling point — emphasize it.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">11</span><span class="fqt">Is skiing at Rusutsu included? What should clients prepare?</span><span class="fico">+</span></div>
+  <div class="fa">Rusutsu Ski Resort is visited on <strong>Day 4</strong>. <strong>Ski suits and equipment are NOT included</strong> — clients must rent on-site. Rusutsu is one of Hokkaido's premier ski resorts, known for exceptional powder snow (Hokkaido powder is legendary among skiers — consistently rated the best dry powder in Japan).<br><br>Clients who want to ski: budget for equipment rental on-site. Clients who don't ski can enjoy the resort scenery, observation decks, and relaxation facilities.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">12</span><span class="fqt">What is Otaru and the Shiroi Koibito Park?</span><span class="fico">+</span></div>
+  <div class="fa">Otaru is a historic port city near Sapporo, visited on Day 7 — last sightseeing day before the airport.<ul>
+  <li><strong>Otaru Canal:</strong> Gas lamp-lit historic canal with stone warehouses — beautiful with snow on the banks. Classic Hokkaido winter photo spot.</li>
+  <li><strong>Kitaichi Glass:</strong> Handcrafted Venetian-style glasswork — great for unique souvenir shopping</li>
+  <li><strong>Music Box Museum:</strong> Thousands of music boxes — whimsical and very Instagrammable</li>
+  <li><strong>Shiroi Koibito Park:</strong> Theme park built around Hokkaido's most famous cookie (Shiroi Koibito — white chocolate wafer sandwich). Includes a factory tour and a massive shop. One of the best pasalubong stops in Japan — the cookies are extremely popular as gifts.</li>
+  </ul>
+  <div class="tip">Shiroi Koibito cookies are one of Japan's most popular omiyage (souvenir) items. The 2×23kg JAL baggage is perfect for stocking up here.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">13</span><span class="fqt">What is Noboribetsu Date Jidaimura (Hell Valley area)?</span><span class="fico">+</span></div>
+  <div class="fa"><strong>Noboribetsu Date Jidaimura</strong> is a samurai-era heritage theme village — streets and buildings recreated from Japan's Edo period (1603–1868). Clients can watch ninja performances, samurai demonstrations, and explore the historic atmosphere in full costume recreations.<br><br><strong>Jigokudani (Hell Valley)</strong> just below is one of Hokkaido's most dramatic landscapes — volcanic steam shooting from the earth, boiling orange pools, sulfurous atmosphere. The "Hell Valley" name comes from the fiery, otherworldly appearance. A completely unique Japan experience far outside the usual Tokyo-Osaka circuit.</div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">14</span><span class="fqt">What are the JAL flight details for Hokkaido 2027?</span><span class="fico">+</span></div>
+  <div class="fa">Via <strong>Japan Airlines (JAL)</strong>:<br><strong>Outbound:</strong> JL 078 — Jan 31 MNL-HND 23:30, arrives Feb 1 04:25. JL 585 — Feb 1 HND-HKD 07:35, arrives 08:55 (Hakodate).<br><strong>Return:</strong> JL 530 — Feb 6 CTS-HND 21:15, arrives 23:00. JL 077 — Feb 7 HND-MNL 01:50, arrives 05:45 Manila.<div class="warn">Provincial clients must arrive at NAIA at least 10 hours before the <strong>23:30 January 31 departure</strong> — i.e., by 1:30 PM on January 31 at the latest.</div></div></div>
+
+  <div class="fi"><div class="fq" onclick="tf(this)"><span class="fnum">15</span><span class="fqt">What is the total true out-of-pocket cost per pax?</span><span class="fico">+</span></div>
+  <div class="fa">Never quote ₱150,999 as the final total. True cost breakdown:<ul>
+  <li>Package: <strong>₱150,999</strong></li>
+  <li>Airline Taxes: <strong>~₱11,570</strong> (subject to change)</li>
+  <li>Japan Group E-Visa: <strong>₱6,500</strong></li>
+  <li>PH Travel Tax: <strong>₱1,620</strong></li>
+  <li>Tipping (mandatory): <strong>₱1,950</strong></li>
+  <li>Fuel Surcharge: TBC (mandatory, confirm with team)</li>
+  <li>Travel Insurance: TBC (mandatory)</li>
+  <li>Ski equipment rental: budgeted separately</li>
+  </ul>
+  <strong>Estimated total before optional ski rental: ~₱172,639+</strong>
+  <div class="good">Always present this full breakdown upfront. Clients who know the true cost before booking are far more satisfied after the trip — and more likely to book again.</div></div></div>
+
+  <div class="acard">
+    <h3>✅ Hokkaido 2027 Pre-Travel Checklist</h3>
+    <ul>
+      <li><div class="sdot">1</div><div>Submit <strong>Japan Group E-Visa</strong> requirements by <strong>early November 2026</strong> (46–90 days before Jan 31)</div></li>
+      <li><div class="sdot">2</div><div>Register at <strong>etravel.gov.ph</strong> within 72 hours before PH departure</div></li>
+      <li><div class="sdot">3</div><div>Budget for <strong>Airline Taxes ~₱11,570</strong> — excluded from package, paid separately</div></li>
+      <li><div class="sdot">4</div><div>Pack <strong>heavy winter gear</strong> — heavy coat, thermal underlayers, waterproof snow boots, gloves, beanie. Hokkaido in February is 0°C to -10°C.</div></li>
+      <li><div class="sdot">5</div><div>Budget for <strong>ski equipment rental</strong> at Rusutsu if client wants to ski or snowboard</div></li>
+      <li><div class="sdot">6</div><div>Confirm <strong>group count is at 40 pax</strong> before collecting full payments — price adjusts if below 40</div></li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /content -->
+
+<script>
+function go(id){
+  document.querySelectorAll('.destination').forEach(function(d){d.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  var btns = document.querySelectorAll('.tab-btn');
+  for(var i=0;i<btns.length;i++){
+    if(btns[i].getAttribute('onclick')==="go('"+id+"')"){
+      btns[i].classList.add('active');break;
+    }
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tf(el){
+  var item=el.closest('.fi');
+  var was=item.classList.contains('open');
+  document.querySelectorAll('.fi.open').forEach(function(i){i.classList.remove('open');});
+  if(!was)item.classList.add('open');
+}
+</script>
+<!-- ================== ADMIN EDITOR ================== -->
+<style id="admin-styles">
+#adminBar{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#0d1b2e;color:#fff;display:none;align-items:center;gap:10px;padding:10px 16px;font-family:'Inter',sans-serif;font-size:13px;box-shadow:0 -2px 14px rgba(0,0,0,.3)}
+#adminBar.show{display:flex}
+#adminBar strong{font-weight:700;letter-spacing:.02em}
+#adminBar .sp{flex:1}
+#adminBar button{font-family:inherit;font-size:13px;font-weight:600;border:none;border-radius:7px;padding:8px 14px;cursor:pointer}
+#adminBar button:disabled{opacity:.55;cursor:default}
+#adminBar .b-edit{background:#1a6ab1;color:#fff}
+#adminBar .b-save{background:#1a9a50;color:#fff}
+#adminBar .b-cancel{background:transparent;color:#cdd5e0;border:1px solid #3a4a60}
+#adminBar input{font-family:inherit;font-size:13px;padding:7px 10px;border-radius:7px;border:1px solid #3a4a60;background:#16263c;color:#fff}
+#adminBar input::placeholder{color:#7e90a8}
+#adminBar .status{font-size:12px;color:#9fb3c8}
+body.admin-editing{padding-bottom:60px}
+body.admin-editing [contenteditable="true"]{outline:1.5px dashed rgba(26,106,177,.5);outline-offset:2px;border-radius:3px;cursor:text}
+body.admin-editing [contenteditable="true"]:hover{outline-color:rgba(26,106,177,.85)}
+body.admin-editing [contenteditable="true"]:focus{outline:2px solid #1a6ab1;outline-offset:2px;background:rgba(26,106,177,.18)}
+body.admin-editing .fi .fa{display:block !important}
+body.admin-editing .admin-imgbox{cursor:pointer;outline:2px dashed rgba(26,106,177,.7);outline-offset:-2px}
+body.admin-editing .admin-imgbox:hover{outline:2px solid #1a6ab1}
+#adminImgModal{position:fixed;inset:0;z-index:100000;background:rgba(8,18,36,.66);display:none;align-items:center;justify-content:center;padding:18px;font-family:'Inter',sans-serif}
+#adminImgModal.show{display:flex}
+#adminImgModal .aim-box{background:#fff;border-radius:14px;width:100%;max-width:440px;padding:20px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+#adminImgModal .aim-title{font-size:15px;font-weight:700;color:#1a2e4a;margin-bottom:12px}
+#adminImgModal label{display:block;font-size:11px;font-weight:600;color:#8a8780;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+#adminImgModal input{width:100%;font-family:inherit;font-size:13px;padding:9px 11px;border:1px solid #d8d5cc;border-radius:8px;color:#1a1a18}
+#adminImgModal input:focus{outline:2px solid #1a6ab1;border-color:#1a6ab1}
+#adminImgModal .aim-or{text-align:center;font-size:11px;color:#9a9890;margin:10px 0 8px;text-transform:uppercase;letter-spacing:.08em}
+#adminImgModal .aim-upload{width:100%;font-family:inherit;font-size:13px;font-weight:600;border-radius:8px;padding:9px 16px;cursor:pointer;background:#eef5ff;color:#1a3a6a;border:1px solid #bcd6f2}
+#adminImgModal .aim-upload:hover{background:#e0edfb}
+#adminImgModal .aim-note{font-size:12px;color:#1a7a40;margin-top:8px;min-height:16px}
+#adminImgModal .aim-note.err{color:#cc2a2a}
+#adminImgModal .aim-prev{margin-top:12px;height:150px;border-radius:9px;overflow:hidden;background:#f0ede6;display:flex;align-items:center;justify-content:center}
+#adminImgModal .aim-prev img{width:100%;height:100%;object-fit:cover}
+#adminImgModal .aim-prev .aim-ph{font-size:12px;color:#9a9890}
+#adminImgModal .aim-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+#adminImgModal .aim-actions button{font-family:inherit;font-size:13px;font-weight:600;border:none;border-radius:8px;padding:9px 16px;cursor:pointer}
+#adminImgModal .aim-apply{background:#1a6ab1;color:#fff}
+#adminImgModal .aim-cancel{background:#f0ede6;color:#46443c}
+</style>
+<script>
+/* ---- Admin editor. Activate by adding ?admin to the URL. ---- */
+(function(){
+  var params=new URLSearchParams(location.search);
+  if(!params.has('admin')) return;   // invisible to normal visitors
+
+  /* Text regions that are safe to edit. */
+  var EDITABLE=[
+    '.hero-eyebrow','.hero h1','.hero-sub',
+    '.dest-text h2','.dest-text p','.dtag',
+    '.comm-strip span','.comm-pill',
+    '.photos-title','.pcard-lbl',
+    '.rl','.rv','.rs',
+    '.faq-title','.fqt','.fa',
+    '.acard h3','.acard li div:last-child',
+    '.tip','.warn','.good','.red'
+  ].join(',');
+
+  /* Image containers — clicking anywhere on them opens the picker. */
+  var IMG_BOXES=['.hero','.dest-banner','.pcard'].join(',');
+
+  var pwd=null, editing=false;
+
+  var bar=document.createElement('div');
+  bar.id='adminBar';
+  bar.innerHTML=''
+    +'<strong>Admin</strong>'
+    +'<span class="status" id="aStatus">Locked</span>'
+    +'<span class="sp"></span>'
+    +'<input id="aPwd" type="password" placeholder="Admin password" style="width:160px" autocomplete="off">'
+    +'<button class="b-edit" id="aEdit">Edit content</button>'
+    +'<button class="b-save" id="aSave" style="display:none">Save changes</button>'
+    +'<button class="b-cancel" id="aCancel" style="display:none">Cancel</button>';
+  document.body.appendChild(bar);
+  bar.classList.add('show');
+
+  var status=bar.querySelector('#aStatus');
+  var pwdInput=bar.querySelector('#aPwd');
+  var btnEdit=bar.querySelector('#aEdit');
+  var btnSave=bar.querySelector('#aSave');
+  var btnCancel=bar.querySelector('#aCancel');
+
+  /* Image picker modal */
+  var modal=document.createElement('div');
+  modal.id='adminImgModal';
+  modal.innerHTML=''
+    +'<div class="aim-box">'
+    +'  <div class="aim-title">Change image</div>'
+    +'  <label>Image URL</label>'
+    +'  <input id="aimUrl" type="text" placeholder="https://... paste an image link" autocomplete="off">'
+    +'  <div class="aim-or">- or -</div>'
+    +'  <button class="aim-upload" id="aimUploadBtn" type="button">Upload from device</button>'
+    +'  <input id="aimFile" type="file" accept="image/*" style="display:none">'
+    +'  <div class="aim-note" id="aimNote"></div>'
+    +'  <div class="aim-prev"><span class="aim-ph">Preview</span></div>'
+    +'  <div class="aim-actions">'
+    +'    <button class="aim-cancel" id="aimCancel">Cancel</button>'
+    +'    <button class="aim-apply" id="aimApply">Apply</button>'
+    +'  </div>'
+    +'</div>';
+  document.body.appendChild(modal);
+  var aimUrl=modal.querySelector('#aimUrl');
+  var aimPrev=modal.querySelector('.aim-prev');
+  var aimApply=modal.querySelector('#aimApply');
+  var aimCancel=modal.querySelector('#aimCancel');
+  var aimUploadBtn=modal.querySelector('#aimUploadBtn');
+  var aimFile=modal.querySelector('#aimFile');
+  var aimNote=modal.querySelector('#aimNote');
+  var currentImg=null, pendingUpload=null;
+
+  function renderPreview(url){
+    if(url){ aimPrev.innerHTML='<img alt="preview" src="'+url.replace(/"/g,'&quot;')+'">'; }
+    else { aimPrev.innerHTML='<span class="aim-ph">Preview</span>'; }
+  }
+  function setNote(msg,isErr){ aimNote.textContent=msg||''; aimNote.className='aim-note'+(isErr?' err':''); }
+
+  function compressImage(file,maxDim,quality){
+    return new Promise(function(resolve,reject){
+      var reader=new FileReader();
+      reader.onload=function(){
+        var img=new Image();
+        img.onload=function(){
+          var w=img.width,h=img.height;
+          if(w>maxDim||h>maxDim){
+            if(w>=h){ h=Math.round(h*maxDim/w); w=maxDim; }
+            else { w=Math.round(w*maxDim/h); h=maxDim; }
+          }
+          var c=document.createElement('canvas'); c.width=w; c.height=h;
+          c.getContext('2d').drawImage(img,0,0,w,h);
+          try{ resolve(c.toDataURL('image/jpeg',quality)); }catch(err){ reject(err); }
+        };
+        img.onerror=function(){ reject(new Error('decode')); };
+        img.src=reader.result;
+      };
+      reader.onerror=function(){ reject(new Error('read')); };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  aimUploadBtn.addEventListener('click',function(){ aimFile.value=''; aimFile.click(); });
+  aimFile.addEventListener('change',function(){
+    var f=aimFile.files&&aimFile.files[0];
+    if(!f) return;
+    setNote('Processing image...',false);
+    compressImage(f,1280,0.8).then(function(dataUrl){
+      pendingUpload=dataUrl; aimUrl.value=''; renderPreview(dataUrl);
+      var kb=Math.round((dataUrl.length*3/4)/1024);
+      setNote('Ready: '+f.name+' (~'+kb+' KB). Click Apply.',false);
+    }).catch(function(){ setNote('Could not read that image. Try a JPG or PNG.',true); });
+  });
+
+  function openImgEditor(img){
+    currentImg=img; pendingUpload=null; setNote('',false);
+    var cur=img.getAttribute('src')||'';
+    aimUrl.value=cur; renderPreview(cur);
+    modal.classList.add('show'); aimUrl.focus(); aimUrl.select();
+  }
+  function closeImgEditor(){ modal.classList.remove('show'); currentImg=null; pendingUpload=null; }
+  aimUrl.addEventListener('input',function(){ pendingUpload=null; setNote('',false); renderPreview(aimUrl.value.trim()); });
+  aimApply.addEventListener('click',function(){
+    if(currentImg){ var u=pendingUpload||aimUrl.value.trim(); if(u){ currentImg.setAttribute('src',u); currentImg.src=u; } }
+    closeImgEditor();
+  });
+  aimCancel.addEventListener('click',closeImgEditor);
+  modal.addEventListener('click',function(e){ if(e.target===modal) closeImgEditor(); });
+
+  /* Stop FAQ toggles from firing while editing so clicks place the cursor. */
+  document.querySelectorAll('.fq').forEach(function(q){
+    q.addEventListener('click',function(e){ if(editing) e.stopImmediatePropagation(); },true);
+  });
+
+  /* Clicking an image area while editing opens the picker (text clicks pass through). */
+  document.querySelectorAll(IMG_BOXES).forEach(function(box){
+    var img=box.querySelector('img');
+    if(!img) return;
+    box.addEventListener('click',function(e){
+      if(!editing) return;
+      if(e.target.closest('[contenteditable="true"]')) return;
+      e.preventDefault(); e.stopImmediatePropagation();
+      openImgEditor(img);
+    },true);
+  });
+
+  function setEditable(on){
+    document.querySelectorAll(EDITABLE).forEach(function(el){
+      if(on) el.setAttribute('contenteditable','true');
+      else   el.removeAttribute('contenteditable');
+    });
+    document.querySelectorAll(IMG_BOXES).forEach(function(box){
+      if(!box.querySelector('img')) return;
+      if(on) box.classList.add('admin-imgbox');
+      else   box.classList.remove('admin-imgbox');
+    });
+    document.body.classList.toggle('admin-editing',on);
+  }
+
+  function enterEdit(){
+    pwd=pwdInput.value;
+    if(!pwd){ status.textContent='Enter the password first'; pwdInput.focus(); return; }
+    editing=true; setEditable(true);
+    btnEdit.style.display='none'; pwdInput.style.display='none';
+    btnSave.style.display=''; btnCancel.style.display='';
+    status.textContent='Editing - click text to edit, click an image to swap it';
+  }
+  function exitEdit(reload){
+    editing=false; setEditable(false);
+    btnEdit.style.display=''; pwdInput.style.display='';
+    btnSave.style.display='none'; btnCancel.style.display='none';
+    if(reload) location.reload();
+  }
+
+  function serialize(){
+    var clone=document.documentElement.cloneNode(true);
+    clone.querySelectorAll('[contenteditable]').forEach(function(el){el.removeAttribute('contenteditable');});
+    clone.querySelectorAll('.admin-imgbox').forEach(function(el){el.classList.remove('admin-imgbox');});
+    var bd=clone.querySelector('body'); if(bd) bd.classList.remove('admin-editing');
+    var ab=clone.querySelector('#adminBar'); if(ab&&ab.parentNode) ab.parentNode.removeChild(ab);
+    var im=clone.querySelector('#adminImgModal'); if(im&&im.parentNode) im.parentNode.removeChild(im);
+    return '<!DOCTYPE html>\n'+clone.outerHTML;
+  }
+
+  function save(){
+    status.textContent='Saving...'; btnSave.disabled=true;
+    fetch('/api/save',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({password:pwd, html:serialize()})
+    })
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+    .then(function(res){
+      btnSave.disabled=false;
+      if(res.ok){ status.textContent='Saved! Live for everyone in ~30s.'; exitEdit(false); }
+      else { status.textContent='Error: '+((res.j&&res.j.error)||'save failed'); }
+    })
+    .catch(function(err){ btnSave.disabled=false; status.textContent='Network error: '+err.message; });
+  }
+
+  btnEdit.addEventListener('click',enterEdit);
+  btnSave.addEventListener('click',save);
+  btnCancel.addEventListener('click',function(){ exitEdit(true); });
+})();
+</script>
+<!-- ================== END ADMIN EDITOR ================== -->
+</body>
+</html>
