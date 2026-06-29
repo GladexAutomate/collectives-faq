@@ -13,7 +13,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const OWNER  = process.env.GH_OWNER || 'salesgladextours-cmd';
+  const OWNER  = process.env.GH_OWNER || 'GladexAutomate';
   const REPO   = process.env.GH_REPO || 'collectives-faq';
   const PATH   = process.env.GH_PATH   || 'index.html';
   const BRANCH = process.env.GH_BRANCH || 'main';
